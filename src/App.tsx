@@ -1,9 +1,8 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
 
-import IntroView from "./pages/Intro/IntroView";
-import Presentation from "./pages/Presentation/PresentationView";
+import IntroView from "./views/Intro/IntroView";
+// import Presentation from "./views/Presentation/PresentationView";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import { ScaleLoader } from "react-spinners";
@@ -28,7 +27,7 @@ function App() {
 
         {/* Presentation  */}
         <ParallaxLayer offset={1}>
-          <Presentation loadHandler={setLoading}/>
+          {/* <Presentation loadHandler={setLoading}/> */}
         </ParallaxLayer>
       </Parallax>
     </div>

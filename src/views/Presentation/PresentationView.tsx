@@ -3,7 +3,7 @@ import RoomScene from "../../components/RoomScene";
 
 import { useRef } from "react";
 
-export default function PresentationView({loadHandler}) {
+export default function PresentationView({loadHandler}: any) {
 
   return (
     <Box>

@@ -2,19 +2,21 @@ import Spline from "@splinetool/react-spline";
 import { useRef } from "react";
 import { Button } from "@mui/material";
 
-export default function RoomScene({loadHandler}) {
+export default function RoomScene({loadHandler}: any) {
   const isLooking = () => {
     console.log("test");
   };
-  const spline = useRef();
+  const spline = useRef<any>(null);
 
-    function onLoad(splineApp) {
+    function onLoad(splineApp: any) {
             spline.current = splineApp
             console.log(spline.current)
             loadHandler(false)
           }
 
-      function triggerAnimation(e){
+      function triggerAnimation(e: any){
+        if(!spline.current) return
+
         const obj = spline.current.findObjectById(e.target.id)
         console.log(obj) // it has position, parent ecc..
         console.log('test')
