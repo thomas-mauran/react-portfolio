@@ -3,6 +3,11 @@ ProjectName: portfolio-thomas
 
 #
 applications:
+- name: portfolio-thomas
+  namespace: thomas
+  repoURL: https://github.com/thomas-mauran/react-portfolio
+  chart: .helm/portfolio
+  server: https://kubernetes.default.svc
 - name: portfolio-frontend-thomas
   namespace: thomas
   repoURL: https://github.com/thomas-mauran/react-portfolio
