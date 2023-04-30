@@ -26,7 +26,7 @@ export default function Navbar() {
         sx={{ mr: 2 }}
         onClick={handleClick}
       >
-        <MenuIcon sx={{color: "#FFF"}}/>
+        <MenuIcon sx={{color: "#FFF",  fontSize: "1.3em"}}/>
       </IconButton>
       <Menu
         anchorEl={anchorEl}
