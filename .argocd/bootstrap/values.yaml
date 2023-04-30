@@ -1,0 +1,24 @@
+project:
+
+  # Name of the project: lowercase whithout spaces (kebab-case)
+  name: portfolio-thomas
+  description: "Portfolio - Thomas Mauran"
+
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - https://github.com/thomas-mauran/react-portfolio
+
+  # Only permit applications to deploy to specific namespace in the same cluster
+  destinations:
+  - server: https://kubernetes.default.svc
+    name: default
+    namespace: '*'
+
+bootstrap:
+  # Name of the bootstrap: app of apps
+  name: portfolio-bootstrap-thomas
+  namespace: argocd
+  repoURL: https://github.com/thomas-mauran/react-portfolio
+  path: .argocd/apps
+  server: https://kubernetes.default.svc
+

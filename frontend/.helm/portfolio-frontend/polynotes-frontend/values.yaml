@@ -1,0 +1,18 @@
+#
+name: portfolio-frontend
+namespace: thomas
+
+replicaCount: 1
+
+image:
+  repository: thomasmauran/portfolio-frontend
+  pullPolicy: Always
+  tag: latest
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
