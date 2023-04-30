@@ -23,7 +23,7 @@ export const projectByYears: year[] = [
         },
         {"name": "Time tracker",
         "description": "Time tracker is the final project for our mongodb class. It is a time tracker that allows you to track your time on projects. The goal here was to use as much as possible mongo capabilities and avoid using javascript for most of the logic. Using aggregation pipeline and indexes was a must to format and optimize as much as possible the requests.",
-        "prodUrl": "https://polynotes.cluster-2022-6.dopolytech.fr/manifesto",
+        "prodUrl": "https://time-tracker.cluster-2022-6.dopolytech.fr",
         "thumbnailUrl": "https://i.imgur.com/31Np0x0.png",
         "sourceUrl": "https://gitlab.polytech.umontpellier.fr/thomas.mauran/timetracker",
         "tags": ["React", "ExpressJS", "Mongodb", "Argocd", "Terraform", "Kubernetes"]
