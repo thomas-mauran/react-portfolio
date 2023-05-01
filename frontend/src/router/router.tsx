@@ -5,6 +5,7 @@ import ProjectView from "../views/Project/ProjectView";
 
 import Navbar from "../components/Navbar/Navbar";
 import ErrorView from "../views/Error/ErrorView";
+import PresentationView from "../views/Presentation/PresentationView";
 const AppLayout = ({ children }: any) => {
   return (
     <>
@@ -22,6 +23,7 @@ const Router = createBrowserRouter(
       <Route path="/" element={<AppLayout />} >
         <Route path="/" element={<HomeView />} />
         <Route path="/project/:title" element={<ProjectView />} />
+        <Route path="/about" element={<PresentationView />} />
         <Route path="*" element={<ErrorView />} />
       </Route>
     </Route>
