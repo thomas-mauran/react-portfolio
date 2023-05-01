@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
+import { Box, IconButton, Menu, MenuItem, Typography, useMediaQuery } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
@@ -8,6 +8,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
 
+  
   const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
@@ -17,7 +18,7 @@ export default function Navbar() {
   };
 
   return (
-    <Box sx={{ display: "flex", alignItems: "center" }}>
+    <Box sx={{position: "fixed", top: 0, left: 20, width: "100%", display: "flex", alignItems: "center", zIndex: "1000" }}>
       <IconButton
         size="large"
         edge="start"
@@ -42,7 +43,7 @@ export default function Navbar() {
         }}
         PaperProps={{
           sx: {
-            bgcolor: "transparent",
+            bgcolor: "#242424",
             boxShadow: "none",
           }
         }}
