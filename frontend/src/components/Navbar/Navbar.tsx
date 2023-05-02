@@ -49,7 +49,7 @@ export default function Navbar() {
         }}
       >
         <MenuItem onClick={handleClose}>
-          <Link to="/" style={{ textDecoration: "none", display: "flex" }}>
+          <Link to="/home" style={{ textDecoration: "none", display: "flex" }}>
             <HomeIcon sx={{margin: "3px 10px", color: "#FFF"}}/>
             <Typography variant="h6" sx={{ fontWeight: "bold", color: "#FFF" }}>
               Home

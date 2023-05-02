@@ -23,7 +23,7 @@ export default function ErrorView() {
       </Box>
       <Typography variant="body1" color="white" margin={"20px"} sx={{fontSize: "1.2em"}}>
         Bring me back to the{" "}
-        <a href="/" style={{ color: "#535bf2", textDecoration: "underline" }}>
+        <a href="/home" style={{ color: "#535bf2", textDecoration: "underline" }}>
           Home page
         </a>
       </Typography>

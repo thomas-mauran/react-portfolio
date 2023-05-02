@@ -16,10 +16,8 @@ export default function RoomScene({loadHandler}: any) {
 
       function triggerAnimation(e: any){
         if(!spline.current) return
-
         const obj = spline.current.findObjectById(e.target.id)
-        console.log(obj) // it has position, parent ecc..
-        console.log('test')
+
         // objectToAnimate.current.emitEvent('start')
       }
 
