@@ -52,7 +52,7 @@ export default function PresentationView({ loadHandler }: any) {
                 <p>Scroll down to learn more about me</p>
                 <KeyboardArrowDownIcon sx={{ fontSize: "3em", color: "#FFF" }} className="arrow" />
               </Box>
-              <Box sx={{ width: "50%", height: "100%", zIndex: "2", position: "absolute", right: "0" }} className="blueBackground">
+              <Box sx={{ width: "50%", height: "100%", zIndex: "2", position: "absolute", right: "0" }} className="box3D redBackground">
                 <Spline scene="https://prod.spline.design/NNdEJ1ExxMEgxzW0/scene.splinecode" style={{ transform: "scale(0.7)", zIndex: "100" }} />
               </Box>
             </Box>
@@ -79,7 +79,7 @@ export default function PresentationView({ loadHandler }: any) {
           {/* Polytech */}
 
           <ParallaxLayer offset={3.9} speed={0.2} sticky={{ start: 3.9, end: 5 }} style={{ width: "150%", height: "100%" }} className="box3D">
-            <Spline scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.5)" }} />
+            <Spline scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.6)" }} />
           </ParallaxLayer>
           <ParallaxLayer offset={4.2} speed={0.2}>
             <Box className="textBox" sx={{ marginLeft: "2%" }}>

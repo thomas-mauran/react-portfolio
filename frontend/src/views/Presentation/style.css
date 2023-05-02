@@ -42,32 +42,43 @@
     align-items: center;
 }
 
-.blueBackground:before {
-    content: "";
-    z-index: -1;
-    position: absolute; 
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(99deg, #ffb1b1 0%, #870404 120%);
-    transform: translate3d(0px, 0px, 0) scale(1.18);
-    filter: blur(150px);
-    opacity: 0.4;
-    transition: opacity 0.3s;
-    border-radius: 100%;
-    margin: auto;
-    width: 40%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.redBackground:before{
+  background: linear-gradient(99deg, #ffb1b1 0%, #870404 120%);
+
 }
 
 
+@keyframes moveArrowIn {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
 
-.titleBox :hover .arrow{
+@keyframes moveArrowOut {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.arrow {
+  position: absolute;
+}
+
+.titleBox:hover .arrow {
+  animation: moveArrowIn 0.2s ease-in-out;
   transform: translateY(10px);
-  animation: 1s ease-in-out;
-  padding: 20px;
+}
+
+.titleBox:not(:hover) .arrow {
+  animation: moveArrowOut 0.2s ease-in-out;
+  transform: translateY(0);
+}
+: translateY(10px);
+
 }
