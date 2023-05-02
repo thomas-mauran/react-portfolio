@@ -1,0 +1,64 @@
+.textBox {
+  width: 40%;
+  background-color: #363636;
+  border-radius: 10px;
+  opacity: 0.9;
+  border: 4px solid rgb(144, 0, 255);
+}
+
+
+
+.image {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+.boxTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boxTitle:before {
+    content: "";
+    z-index: -1;
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-99deg, #c043ce 0%, #6f2dbd 120%);
+    transform: translate3d(0px, 0px, 0) scale(1.18);
+    filter: blur(150px);
+    opacity: 0.4;
+    transition: opacity 0.3s;
+    border-radius: 100%;
+    margin: auto;
+    width: 40%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blueBackground:before {
+    content: "";
+    z-index: -1;
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(99deg, #ffb1b1 0%, #870404 120%);
+    transform: translate3d(0px, 0px, 0) scale(1.18);
+    filter: blur(150px);
+    opacity: 0.4;
+    transition: opacity 0.3s;
+    border-radius: 100%;
+    margin: auto;
+    width: 40%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

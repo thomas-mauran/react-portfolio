@@ -21,7 +21,7 @@ const Router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<AppLayout />} >
-        <Route path="/" element={<HomeView />} />
+        <Route path="/" element={<PresentationView />} />
         <Route path="/project/:title" element={<ProjectView />} />
         <Route path="/about" element={<PresentationView />} />
         <Route path="*" element={<ErrorView />} />
