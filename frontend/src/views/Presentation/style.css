@@ -1,9 +1,10 @@
 .textBox {
   width: 40%;
-  background-color: #363636;
+  background-color: #2e2b33;
   border-radius: 10px;
   opacity: 0.9;
-  border: 4px solid rgb(144, 0, 255);
+  padding: 10px;
+  border: 2px solid #644c7f;
 }
 
 
@@ -14,12 +15,12 @@
   width: 100%;
   max-width: 600px;
 }
-.boxTitle{
+.box3D{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.boxTitle:before {
+.box3D:before {
     content: "";
     z-index: -1;
     position: absolute; 
@@ -30,11 +31,11 @@
     background: linear-gradient(-99deg, #c043ce 0%, #6f2dbd 120%);
     transform: translate3d(0px, 0px, 0) scale(1.18);
     filter: blur(150px);
-    opacity: 0.4;
+    opacity: 0.35;
     transition: opacity 0.3s;
     border-radius: 100%;
     margin: auto;
-    width: 40%;
+    width: 30%;
     height: 30%;
     display: flex;
     justify-content: center;
@@ -61,4 +62,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+.titleBox :hover .arrow{
+  transform: translateY(10px);
+  animation: 1s ease-in-out;
+  padding: 20px;
 }
