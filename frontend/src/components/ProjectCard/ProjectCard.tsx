@@ -17,11 +17,6 @@ export default function AddTime(props: ProjectCardProps) {
     navigate(`/project/${props.title}`);
   };
 
-//   const handleTagClick = (event: any) => {
-//     event.stopPropagation();
-//     navigate(`/tag/${event.target.innerText}`);
-//   };
-
   return (
     <Box className="card" onClick={redirect}>
       <Typography variant="h6">{props.title}</Typography>

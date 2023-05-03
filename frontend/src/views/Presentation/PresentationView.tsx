@@ -76,9 +76,28 @@ export default function PresentationView({ loadHandler }: any) {
               </Box>
             </Box>
           </ParallaxLayer>
-          {/* Polytech */}
 
-          <ParallaxLayer offset={3.9} speed={0.2} sticky={{ start: 3.9, end: 5 }} style={{ width: "150%", height: "100%" }} className="box3D">
+          {/* Polytech */}
+          <ParallaxLayer offset={3.6} speed={0.2} sticky={{ start: 3.6, end: 4.3 }} style={{ width: "150%", height: "100%" }} className="box3D">
+            <Spline scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.6)" }} />
+          </ParallaxLayer>
+          <ParallaxLayer offset={4.2} speed={0.2}>
+            <Box className="textBox" sx={{ marginLeft: "2%" }}>
+              <h1 style={{ fontSize: "2em", padding: "20px", color: "white", margin: "10px 0" }}>Education</h1>
+              <Box sx={{ textAlign: "left", margin: "20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <img src="https://www.polytech.umontpellier.fr/images/formation/do/DO-seul.jpg" alt="DO Polytech logo" className="image" style={{ width: "200px" }} />
+
+                <Typography variant="subtitle1" color="white" sx={{ fontSize: "1.5em", margin: "50px 0px" }}>
+                  Currently, I'm an apprentice engineer studying DevOps at Polytech DO. I started in 2022 and will be there until 2025. At Polytech DO, I've been learning both development and operations to get a better understanding of how software
+                  development and deployment work in real-life scenarios. 
+                </Typography>
+              </Box>
+            </Box>
+          </ParallaxLayer>
+
+
+          {/* Kuzzle */}
+          <ParallaxLayer offset={3.6} speed={0.2} sticky={{ start: 3.6, end: 4.3 }} style={{ width: "150%", height: "100%" }} className="box3D">
             <Spline scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.6)" }} />
           </ParallaxLayer>
           <ParallaxLayer offset={4.2} speed={0.2}>

@@ -1,13 +1,11 @@
 .textBox {
   width: 40%;
-  background-color: #2e2b33;
+  background-color: #242129;
   border-radius: 10px;
   opacity: 0.9;
   padding: 10px;
   border: 2px solid #644c7f;
 }
-
-
 
 .image {
   border-radius: 5px;
@@ -78,7 +76,4 @@
 .titleBox:not(:hover) .arrow {
   animation: moveArrowOut 0.2s ease-in-out;
   transform: translateY(0);
-}
-: translateY(10px);
-
 }
