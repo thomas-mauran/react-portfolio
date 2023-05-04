@@ -7,7 +7,7 @@ import { fabClasses, Grid, Typography } from "@mui/material";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 import "./style.css";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function PresentationView({ loadHandler }: any) {
   const [loading, setLoading] = React.useState(true);
@@ -46,7 +46,7 @@ export default function PresentationView({ loadHandler }: any) {
       ) : (
         <Parallax pages={10}>
           <ParallaxLayer offset={0} speed={0.2}>
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", zIndex: "1000", marginTop: "-2%" }} >
+            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", zIndex: "1000", marginTop: "-2%" }}>
               <Box sx={{ marginRight: "30%" }} className="titleBox">
                 <h1>Welcome to my portfolio 👋</h1>
                 <p>Scroll down to learn more about me</p>
@@ -59,8 +59,8 @@ export default function PresentationView({ loadHandler }: any) {
           </ParallaxLayer>
 
           {/* My room */}
-          <ParallaxLayer offset={1} speed={0.2} sticky={{ start: 1, end: 2 }} style={{ marginRight: "40%", width: "60%" }} className="box3D">
-            <Spline scene="https://prod.spline.design/iW1m2qgn3bAmXsas/scene.splinecode" style={{ transform: "scale(1.3)" }} />
+          <ParallaxLayer offset={1} speed={0.2} sticky={{ start: 1, end: 2 }} style={{  width: "50%" }} className="box3D">
+            <Spline scene="https://prod.spline.design/iW1m2qgn3bAmXsas/scene.splinecode" style={{ transform: "scale(0.8)" }} />
           </ParallaxLayer>
           <ParallaxLayer offset={1.5} speed={0.2}>
             <Box className="textBox" sx={{ marginLeft: "50%" }}>
@@ -78,37 +78,36 @@ export default function PresentationView({ loadHandler }: any) {
           </ParallaxLayer>
 
           {/* Polytech */}
-          <ParallaxLayer offset={3.6} speed={0.2} sticky={{ start: 3.6, end: 4.3 }} style={{ width: "150%", height: "100%" }} className="box3D">
+          <ParallaxLayer offset={3.2} speed={0.2} sticky={{ start: 3.2, end: 4 }} style={{ width: "150%", height: "100%" }} className="box3D">
             <Spline scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.6)" }} />
           </ParallaxLayer>
-          <ParallaxLayer offset={4.2} speed={0.2}>
+          <ParallaxLayer offset={3.7} speed={0.2}>
             <Box className="textBox" sx={{ marginLeft: "2%" }}>
               <h1 style={{ fontSize: "2em", padding: "20px", color: "white", margin: "10px 0" }}>Education</h1>
               <Box sx={{ textAlign: "left", margin: "20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <img src="https://www.polytech.umontpellier.fr/images/formation/do/DO-seul.jpg" alt="DO Polytech logo" className="image" style={{ width: "200px" }} />
+                <img src="https://www.polytech.umontpellier.fr/images/formation/do/DO-seul.jpg" alt="DO Polytech logo" className="image" style={{ width: "200px", borderRadius: "100%", padding: "-20px" }} />
 
                 <Typography variant="subtitle1" color="white" sx={{ fontSize: "1.5em", margin: "50px 0px" }}>
                   Currently, I'm an apprentice engineer studying DevOps at Polytech DO. I started in 2022 and will be there until 2025. At Polytech DO, I've been learning both development and operations to get a better understanding of how software
-                  development and deployment work in real-life scenarios. 
+                  development and deployment work in real-life scenarios.
                 </Typography>
               </Box>
             </Box>
           </ParallaxLayer>
 
-
-          {/* Kuzzle */}
-          <ParallaxLayer offset={3.6} speed={0.2} sticky={{ start: 3.6, end: 4.3 }} style={{ width: "150%", height: "100%" }} className="box3D">
-            <Spline scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.6)" }} />
+          {/* My room */}
+          <ParallaxLayer offset={5} speed={0.2} sticky={{ start: 5, end: 6 }} style={{ left: "0px", width: "50%", minWidth: "1500px" }} className="box3D box3DBlue">
+            <Spline scene="https://prod.spline.design/PPW5io9JuCDlXmAk/scene.splinecode" style={{ transform: "scale(0.4)" }} />
           </ParallaxLayer>
-          <ParallaxLayer offset={4.2} speed={0.2}>
-            <Box className="textBox" sx={{ marginLeft: "2%" }}>
-              <h1 style={{ fontSize: "2em", padding: "20px", color: "white", margin: "10px 0" }}>Education</h1>
-              <Box sx={{ textAlign: "left", margin: "20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <img src="https://www.polytech.umontpellier.fr/images/formation/do/DO-seul.jpg" alt="DO Polytech logo" className="image" style={{ width: "200px" }} />
-
+          <ParallaxLayer offset={5.5} speed={0.2}>
+            <Box className="textBox" sx={{ marginLeft: "50%", border: "2px solid #50e5db"}}>
+              <h1 style={{ fontSize: "2em", padding: "20px", color: "white", margin: "10px 0" }}>Web development</h1>
+              <img src="https://media.tenor.com/J8o7AxtZiwgAAAAC/www-web.gif" alt="ghibli gif" className="image" />
+              <Box sx={{ textAlign: "left", margin: "20px" }}>
                 <Typography variant="subtitle1" color="white" sx={{ fontSize: "1.5em", margin: "50px 0px" }}>
-                  Currently, I'm an apprentice engineer studying DevOps at Polytech DO. I started in 2022 and will be there until 2025. At Polytech DO, I've been learning both development and operations to get a better understanding of how software
-                  development and deployment work in real-life scenarios. 
+                  I have experience with both React and Vue.js in website development. At Polytech, I primarily use React to create
+                  visually appealing and user-friendly websites. Meanwhile, at Kuzzle, I've explored ways to incorporate interactive elements into web applications using Vue.js. In my projects, I enjoy experimenting with different 3D libraries and
+                  frameworks like Three.js and A-Frame to create interactive 3D scenes and objects. By combining 3D with website development using React and Vue.js, I'm able to bring a new level of creativity and innovation to my work.
                 </Typography>
               </Box>
             </Box>

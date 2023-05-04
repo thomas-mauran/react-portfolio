@@ -4,7 +4,8 @@
   border-radius: 10px;
   opacity: 0.9;
   padding: 10px;
-  border: 2px solid #644c7f;
+  border: 3px solid #644c7f;
+  
 }
 
 .image {
@@ -38,6 +39,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.box3DBlue:before {
+
+  background: linear-gradient(-99deg, #439bce 0%, #397c4d 120%);
+
 }
 
 .redBackground:before{
