@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box, IconButton, Menu, MenuItem, Typography, useMediaQuery } from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
@@ -41,9 +41,9 @@ export default function Navbar() {
         }}>
         <MenuItem onClick={handleClose}>
           <Link to="/projects" style={{ textDecoration: "none", display: "flex" }}>
-            <HomeIcon sx={{ margin: "3px 10px", color: "#FFF" }} />
+            <MenuBookIcon sx={{ margin: "3px 10px", color: "#FFF" }} />
             <Typography variant="h6" sx={{ fontWeight: "bold", color: "#FFF" }}>
-              Home
+              Projects
             </Typography>
           </Link>
         </MenuItem>
