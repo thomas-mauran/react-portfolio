@@ -55,6 +55,10 @@
   background: linear-gradient(-99deg, #439bce 0%, #397c4d 120%);
 }
 
+.darkBlueBackground:before {
+  background: linear-gradient(-99deg, #df8026 0%, #2e58bc 100%);
+}
+
 .redBackground:before {
   background: linear-gradient(99deg, #ffb1b1 0%, #870404 120%);
 }
@@ -102,7 +106,7 @@ ul {
 }
 
 li p {
-  font-size: 0.8em;
+  font-size: 1 em;
   font-weight: 400;
 }
 
