@@ -105,3 +105,14 @@ li p {
   font-size: 0.8em;
   font-weight: 400;
 }
+
+.loaderBox {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: fixed;
+  background-color: #1c1826;
+}

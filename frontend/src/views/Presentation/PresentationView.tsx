@@ -1,5 +1,4 @@
 import { Box } from "@mui/system";
-import RoomScene from "../../components/RoomScene";
 import { ScaleLoader } from "react-spinners";
 
 import React, { Suspense, useEffect, useRef } from "react";
@@ -11,7 +10,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function PresentationView({ loadHandler }: any) {
   const [loading, setLoading] = React.useState(true);
-  const [assetLoaded, setAssetLoaded] = React.useState([false, false]);
+  const [assetLoaded, setAssetLoaded] = React.useState([false, false, false]);
 
   const firstScene = useRef<HTMLCanvasElement>(null);
 
@@ -49,17 +48,7 @@ export default function PresentationView({ loadHandler }: any) {
   return (
     <Box>
       {loading && (
-        <Box
-          sx={{
-            height: "100vh",
-            width: "100vw",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: "1000",
-            position: "fixed",
-            backgroundColor: "#1c1826",
-          }}>
+        <Box className="loaderBox">
           <ScaleLoader color="#7b518f" />
         </Box>
       )}
@@ -67,7 +56,25 @@ export default function PresentationView({ loadHandler }: any) {
         <ParallaxLayer offset={0} speed={0.2}>
           <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", zIndex: "1000", marginTop: "-2%" }}>
             <Box sx={{ marginRight: "30%" }} className="titleBox">
-              <h1>Welcome to my portfolio 👋</h1>
+              <Box sx={{ marginBottom: "20px", marginRight: "30%", width: "100%", display: "flex" }}>
+                <Typography variant="h2" margin="7px" fontWeight={"bold"}>
+                  Welcome to my
+                </Typography>
+                <Typography
+                  variant="h2"
+                  margin="7px"
+                  fontWeight="bold"
+                  sx={{
+                    background: "linear-gradient(135deg, #fce0e0 0%, #db8080 0%, #e84848 100%)",
+                    "-webkit-background-clip": "text",
+                    "-webkit-text-fill-color": "transparent",
+                  }}>
+                  portfolio
+                </Typography>
+                <Typography variant="h2" margin="7px" fontWeight={"bold"}>
+                  👋
+                </Typography>
+              </Box>
               <p>Scroll down to learn more about me</p>
               <KeyboardArrowDownIcon sx={{ fontSize: "3em", color: "#FFF" }} className="arrow" onClick={scrollToFirstBlock} />
             </Box>
@@ -98,7 +105,7 @@ export default function PresentationView({ loadHandler }: any) {
 
         {/* Polytech */}
         <ParallaxLayer offset={3.2} speed={0.2} sticky={{ start: 3.2, end: 4 }} style={{ width: "150%", height: "100%" }} className="box3D">
-          <Spline scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.6)" }} />
+          <Spline ref={firstScene} onLoad={(event) => onLoad(event)} id="2" scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.6)" }} />
         </ParallaxLayer>
         <ParallaxLayer offset={3.7} speed={0.2}>
           <Box className="textBox" sx={{ marginLeft: "2%" }}>
