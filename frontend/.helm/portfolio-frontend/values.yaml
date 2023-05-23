@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: thomasmauran/portfolio-frontend
   pullPolicy: Always
-  tag: 'cc945ea'
+  tag: '28e2455'
 
 resources:
   limits:
