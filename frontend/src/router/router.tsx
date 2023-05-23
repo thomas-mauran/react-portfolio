@@ -20,9 +20,9 @@ const AppLayout = ({ children }: any) => {
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<AppLayout />} >
+      <Route path="/" element={<AppLayout />}>
         <Route path="/" element={<PresentationView />} />
-        <Route path="/home" element={<HomeView />} />
+        <Route path="/projects" element={<HomeView />} />
         <Route path="/project/:title" element={<ProjectView />} />
         <Route path="/about" element={<PresentationView />} />
         <Route path="*" element={<ErrorView />} />
