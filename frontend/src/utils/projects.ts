@@ -16,6 +16,16 @@ export const projectByYears: year[] = [
     year: "2023",
     projects: [
       {
+        name: "Tic tac toe rust",
+        description:
+          "Rust simple TUI tic tac toe made with ratatui lib.   ",
+        prodUrl: "",
+        thumbnailUrl: "https://github.com/thomas-mauran/tic-tac-toe/blob/main/assets/preview.gif?raw=true",
+        sourceUrl: "https://github.com/thomas-mauran/tic-tac-toe",
+        tags: ["Rust"],
+      },
+      
+      {
         name: "Polynotes",
         description:
           "Polynotes is our main school project for the next 3 years. It is made of many itterations this being the first one that we had to do alone in 2 months. We are soon gonna start to work on the second itteration that will be a complete rewrite of the application with a new tech stack and new features and a team of 14 students.",
