@@ -5,7 +5,18 @@
   opacity: 0.9;
   padding: 10px;
   border: 3px solid #644c7f;
-  
+}
+
+.textBox h1 {
+  font-size: 2em;
+  padding: "20px";
+  color: "white";
+  margin: 20px 10px;
+}
+
+.textBox .paragraph {
+  font-size: 1.5em;
+  margin: 50px 0px;
 }
 
 .image {
@@ -14,44 +25,43 @@
   width: 100%;
   max-width: 600px;
 }
-.box3D{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.box3D {
+  position: absolute;
+  z-index: 10;
 }
 .box3D:before {
-    content: "";
-    z-index: -1;
-    position: absolute; 
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(-99deg, #c043ce 0%, #6f2dbd 120%);
-    transform: translate3d(0px, 0px, 0) scale(1.18);
-    filter: blur(150px);
-    opacity: 0.35;
-    transition: opacity 0.3s;
-    border-radius: 100%;
-    margin: auto;
-    width: 30%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-99deg, #c043ce 0%, #6f2dbd 120%);
+  transform: translate3d(0px, 0px, 0) scale(1.18);
+  filter: blur(150px);
+  opacity: 0.35;
+  transition: opacity 0.3s;
+  border-radius: 100%;
+  margin: auto;
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.box3DBlue:before {
-
+.blueBackground:before {
   background: linear-gradient(-99deg, #439bce 0%, #397c4d 120%);
-
 }
 
-.redBackground:before{
+.redBackground:before {
   background: linear-gradient(99deg, #ffb1b1 0%, #870404 120%);
-
 }
 
+.yellowBackground:before {
+  background: linear-gradient(99deg, #5296da 0%, #b5300b 120%);
+}
 
 @keyframes moveArrowIn {
   0% {
@@ -73,6 +83,7 @@
 
 .arrow {
   position: absolute;
+  cursor: pointer;
 }
 
 .titleBox:hover .arrow {
@@ -83,4 +94,14 @@
 .titleBox:not(:hover) .arrow {
   animation: moveArrowOut 0.2s ease-in-out;
   transform: translateY(0);
+}
+
+ul {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+li p {
+  font-size: 0.8em;
+  font-weight: 400;
 }
