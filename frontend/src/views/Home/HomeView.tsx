@@ -3,23 +3,23 @@ import { projectByYears } from "../../utils/projects";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 export default function HomeView() {
-  const isSmallScreen = useMediaQuery("(max-width:600px)");  
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
   return (
     <Box sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
-      <Box sx={{ display: isSmallScreen ? "block" : "flex", marginBottom: "20px"}}>
+      <Box sx={{ display: isSmallScreen ? "block" : "flex", marginBottom: "40px" }}>
         <Typography variant="h2" margin="7px" fontWeight={"bold"}>
-          Welcome to my
+          My
         </Typography>
         <Typography
           variant="h2"
           margin="7px"
           fontWeight="bold"
           sx={{
-            background: "linear-gradient(135deg, rgba(65,26,247,1) 0%, rgba(149,158,255,1) 0%, rgba(66,26,236,1) 100%)",
+            background: "linear-gradient(135deg, rgba(65,26,247,1) 0%, rgba(149,158,255,1) 0%, rgba(76,26,236,1) 100%)",
             "-webkit-background-clip": "text",
             "-webkit-text-fill-color": "transparent",
           }}>
-          portfolio
+          projects
         </Typography>
       </Box>
 
