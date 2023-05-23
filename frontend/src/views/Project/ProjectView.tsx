@@ -29,7 +29,7 @@ export default function ProjectView() {
         {project.name}
       </Typography>
       <Box display="flex" alignItems="center" margin={"50px"} sx={{ display: isSmallScreen ? "inline" : "flex" }}>
-        <Box mr={20} sx={{ display: isSmallScreen ? "none" : "inline" }}>
+        <Box mr={20} sx={{ display: isSmallScreen ? "none" : "inline", width: "50vw" }}>
           <Typography variant="subtitle1" sx={{ fontSize: "1.2em", textAlign: "left" }} gutterBottom>
             <b>Description: </b>
             <br />
@@ -46,24 +46,24 @@ export default function ProjectView() {
           </Typography>
         </Box>
 
-        <Box>
-          <img src={project.thumbnailUrl} alt={project.name} style={{ width: "45vw", borderRadius: "10px",  minWidth: "400px", margin: "40px" }} />
+        <Box sx={{ width: "50vw" }}>
+          <img src={project.thumbnailUrl} alt={project.name} style={{ width: "45vw", borderRadius: "10px", minWidth: "400px", margin: "40px" }} />
           <Box mr={isSmallScreen ? 0 : 20} sx={{ display: isSmallScreen ? "flex" : "none", flexDirection: "column", alignItems: "center" }}>
-              <Typography variant="subtitle1" sx={{ fontSize: "1.2em", textAlign: "left", margin: "40px" }} gutterBottom>
-                <b>Description: </b>
-                <br />
-
-                {project.description}
-              </Typography>
+            <Typography variant="subtitle1" sx={{ fontSize: "1.2em", textAlign: "left", margin: "40px" }} gutterBottom>
+              <b>Description: </b>
               <br />
 
-              <Typography variant="subtitle1" sx={{ fontSize: "1.2em", margin: "40px" }} gutterBottom>
-                Tags:{" "}
-                {project.tags?.map((tag, index) => {
-                  return <Chip key={index} label={tag} color="primary" sx={{ marginRight: "10px" }} />;
-                })}
-              </Typography>
-            </Box>
+              {project.description}
+            </Typography>
+            <br />
+
+            <Typography variant="subtitle1" sx={{ fontSize: "1.2em", margin: "40px" }} gutterBottom>
+              Tags:{" "}
+              {project.tags?.map((tag, index) => {
+                return <Chip key={index} label={tag} color="primary" sx={{ marginRight: "10px" }} />;
+              })}
+            </Typography>
+          </Box>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             {project.prodUrl && (
               <Typography variant="subtitle1" sx={{ fontSize: "1.2em" }} gutterBottom>
