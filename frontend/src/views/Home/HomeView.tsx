@@ -29,11 +29,11 @@ export default function HomeView() {
       </Typography>
       {projectByYears.map((year, index) => {
         return (
-          <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "0px 100px" }}>
             <Divider sx={{ borderColor: "white", width: "400px", margin: "20px" }} />
 
             <h2>{year.year}</h2>
-            <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", flexDirection: "row" }}>
+            <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", justifyContent: "center" }}>
               {year.projects.map((project, index) => {
                 return <ProjectCard key={index} title={project.name} tags={project.tags} thumbnail={project.thumbnailUrl} />;
               })}

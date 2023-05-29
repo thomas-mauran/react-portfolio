@@ -1,4 +1,4 @@
-import { Box,Typography, Chip } from "@mui/material";
+import { Box, Typography, Chip } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
@@ -19,14 +19,13 @@ export default function AddTime(props: ProjectCardProps) {
 
   return (
     <Box className="card" onClick={redirect}>
-      <Typography variant="h6">{props.title}</Typography>
       <img src={props.thumbnail} alt={`${props.title} thumbnail`} />
+      <Typography variant="h6">{props.title}</Typography>
       <Box>
         {props.tags.map((tag, index) => {
-          return <Chip key={index} label={tag} color="primary" sx={{ width: "80px", margin: "5px 10px", borderRadius: "10px"}} />;
+          return <Chip key={index} label={tag} color="primary" sx={{ margin: "5px 10px", borderRadius: "10px" }} />;
         })}
       </Box>
-
     </Box>
   );
 }
