@@ -16,15 +16,31 @@ export const projectByYears: year[] = [
     year: "2023",
     projects: [
       {
-        name: "Tic tac toe rust",
+        name: "Cobol guess the number",
+        description: "Basic guess the number game written in COBOL, for fun and learning purposes.",
+        prodUrl: "",
+        thumbnailUrl: "https://raw.githubusercontent.com/thomas-mauran/cobol-mystery-number/main/readme-assets/cobol.png",
+        sourceUrl: "https://github.com/thomas-mauran/cobol-mystery-number",
+        tags: ["Cobol"],
+      },
+      {
+        name: "Exoplanet dataviz",
         description:
-          "Rust simple TUI tic tac toe made with ratatui lib.   ",
+          "This project is part of our data visualisation course at the DO Polytech departement of montpellier. The goal here was to find a dataset and ask ourselves 3 questions about it. Then we had to create a shiny app and a markdown document to visualize the data and answer our questions.",
+        prodUrl: "https://thomas-mauran.shinyapps.io/Exoplanets-R-visualization/",
+        thumbnailUrl: "https://raw.githubusercontent.com/thomas-mauran/Exoplanets-R-visualization/main/images/readme-thumbnail.png",
+        sourceUrl: "https://github.com/thomas-mauran/Exoplanets-R-visualization",
+        tags: ["R", "Shiny"],
+      },
+      {
+        name: "Tic tac toe rust",
+        description: "Rust simple TUI tic tac toe made with ratatui lib.   ",
         prodUrl: "",
         thumbnailUrl: "https://github.com/thomas-mauran/tic-tac-toe/blob/main/assets/preview.gif?raw=true",
         sourceUrl: "https://github.com/thomas-mauran/tic-tac-toe",
         tags: ["Rust"],
       },
-      
+
       {
         name: "Polynotes",
         description:
