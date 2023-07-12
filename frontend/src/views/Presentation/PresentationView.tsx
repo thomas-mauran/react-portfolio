@@ -2,15 +2,16 @@ import { Box } from "@mui/system";
 import { ScaleLoader } from "react-spinners";
 
 import React, { Suspense, useEffect, useRef } from "react";
-import { fabClasses, Grid, Typography } from "@mui/material";
+import { Button, fabClasses, Grid, Typography } from "@mui/material";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 import "./style.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { Link } from "react-router-dom";
 
 export default function PresentationView({ loadHandler }: any) {
   const [loading, setLoading] = React.useState(true);
-  const [assetLoaded, setAssetLoaded] = React.useState([false, false, false]);
+  const [assetLoaded, setAssetLoaded] = React.useState([false]);
 
   const firstScene = useRef<HTMLCanvasElement>(null);
 
@@ -30,6 +31,7 @@ export default function PresentationView({ loadHandler }: any) {
   }, [assetLoaded]);
 
   function onLoad(event: any) {
+    console.log("onLoad", event.canvas.id);
     setAssetLoaded((prevState) => {
       const newState = [...prevState];
       newState[event.canvas.id] = true;
@@ -53,7 +55,7 @@ export default function PresentationView({ loadHandler }: any) {
           <ScaleLoader color="#7b518f" />
         </Box>
       )}
-      <Parallax pages={12}>
+      <Parallax pages={1}>
         <ParallaxLayer offset={0} speed={0.2}>
           <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", zIndex: "1000", marginTop: "-2%" }}>
             <Box sx={{ marginRight: "30%" }} className="titleBox">
@@ -76,8 +78,13 @@ export default function PresentationView({ loadHandler }: any) {
                   👋
                 </Typography>
               </Box>
-              <p>Scroll down to learn more about me</p>
-              <KeyboardArrowDownIcon sx={{ fontSize: "3em", color: "#FFF" }} className="arrow" onClick={scrollToFirstBlock} />
+              <p>You can find more about my projects</p>
+              <Button sx={{ background: "#C43434", color: "white" }}>
+                <Link to="/projects" style={{ color: "white" }}>
+                  here
+                </Link>
+              </Button>
+              {/* <KeyboardArrowDownIcon sx={{ fontSize: "3em", color: "#FFF" }} className="arrow" onClick={scrollToFirstBlock} /> */}
             </Box>
             <Box sx={{ width: "50%", height: "100%", zIndex: "2", position: "absolute", right: "0" }} className="box3D redBackground">
               <Spline onLoad={(event) => onLoad(event)} id="0" scene="https://prod.spline.design/NNdEJ1ExxMEgxzW0/scene.splinecode" style={{ transform: "scale(0.7)", zIndex: "100" }} />
@@ -86,8 +93,8 @@ export default function PresentationView({ loadHandler }: any) {
         </ParallaxLayer>
 
         {/* My room */}
-        <ParallaxLayer offset={1} speed={0.2} sticky={{ start: 1, end: 2 }} style={{ width: "50%" }} className="box3D">
-          <Spline ref={firstScene} onLoad={(event) => onLoad(event)} id="1" scene="https://prod.spline.design/iW1m2qgn3bAmXsas/scene.splinecode" style={{ transform: "scale(0.8)" }} />
+        {/* <ParallaxLayer offset={1} speed={0.2} sticky={{ start: 1, end: 2 }} style={{ width: "50%" }} className="box3D">
+          <Spline ref={firstScene} scene="https://prod.spline.design/iW1m2qgn3bAmXsas/scene.splinecode" style={{ transform: "scale(0.8)" }} />
         </ParallaxLayer>
         <ParallaxLayer offset={1.5} speed={0.2}>
           <Box className="textBox" sx={{ marginLeft: "50%" }}>
@@ -102,11 +109,11 @@ export default function PresentationView({ loadHandler }: any) {
               </Typography>
             </Box>
           </Box>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         {/* Polytech */}
-        <ParallaxLayer offset={3.2} speed={0.2} sticky={{ start: 3.2, end: 4 }} style={{ width: "150%", height: "100%" }} className="box3D">
-          <Spline onLoad={(event) => onLoad(event)} id="2" scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.6)" }} />
+        {/* <ParallaxLayer offset={3.2} speed={0.2} sticky={{ start: 3.2, end: 4 }} style={{ width: "150%", height: "100%" }} className="box3D">
+          <Spline scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.6)" }} />
         </ParallaxLayer>
         <ParallaxLayer offset={3.7} speed={0.2}>
           <Box className="textBox" sx={{ marginLeft: "2%" }}>
@@ -120,10 +127,10 @@ export default function PresentationView({ loadHandler }: any) {
               </Typography>
             </Box>
           </Box>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         {/* Frontend */}
-        <ParallaxLayer offset={5} speed={0.2} sticky={{ start: 5, end: 6 }} style={{ width: "50%", height: "100%" }} className="box3D blueBackground">
+        {/* <ParallaxLayer offset={5} speed={0.2} sticky={{ start: 5, end: 6 }} style={{ width: "50%", height: "100%" }} className="box3D blueBackground">
           <Spline scene="https://prod.spline.design/PPW5io9JuCDlXmAk/scene.splinecode" style={{ transform: "scale(1.1)" }} />
         </ParallaxLayer>
         <ParallaxLayer offset={5.5} speed={0.2}>
@@ -168,10 +175,10 @@ export default function PresentationView({ loadHandler }: any) {
               </ul>
             </Box>
           </Box>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         {/* System */}
-        <ParallaxLayer offset={7} speed={0.2} sticky={{ start: 7, end: 8 }} style={{ width: "50%", height: "100%", marginLeft: "50vw" }} className="box3D yellowBackground">
+        {/* <ParallaxLayer offset={7} speed={0.2} sticky={{ start: 7, end: 8 }} style={{ width: "50%", height: "100%", marginLeft: "50vw" }} className="box3D yellowBackground">
           <Spline scene="https://prod.spline.design/M5fU1KjYCuNDmPra/scene.splinecode" style={{ transform: "scale(0.9)" }} />
         </ParallaxLayer>
         <ParallaxLayer offset={7.5} speed={0.2}>
@@ -206,10 +213,10 @@ export default function PresentationView({ loadHandler }: any) {
               </ul>
             </Box>
           </Box>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         {/* Ops */}
-        <ParallaxLayer offset={9} speed={0.2} sticky={{ start: 9, end: 10 }} style={{ width: "50%", height: "100%" }} className="box3D darkBlueBackground">
+        {/* <ParallaxLayer offset={9} speed={0.2} sticky={{ start: 9, end: 10 }} style={{ width: "50%", height: "100%" }} className="box3D darkBlueBackground">
           <Spline scene="https://prod.spline.design/OTjPQzdcOju7NHOj/scene.splinecode" style={{ transform: "scale(0.9)" }} />
         </ParallaxLayer>
         <ParallaxLayer offset={9.5} speed={0.2}>
@@ -239,7 +246,7 @@ export default function PresentationView({ loadHandler }: any) {
               </ul>
             </Box>
           </Box>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
       </Parallax>
     </Box>
   );
