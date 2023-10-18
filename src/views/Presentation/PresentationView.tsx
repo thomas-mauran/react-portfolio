@@ -16,7 +16,6 @@ export default function PresentationView({ loadHandler }: any) {
   const firstScene = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    console.log("assetLoaded", assetLoaded);
     let allLoaded = true;
     for (let i = 0; i < assetLoaded.length; i++) {
       if (!assetLoaded[i]) {
@@ -25,13 +24,11 @@ export default function PresentationView({ loadHandler }: any) {
     }
 
     if (allLoaded) {
-      console.log("all loaded");
       setLoading(false);
     }
   }, [assetLoaded]);
 
   function onLoad(event: any) {
-    console.log("onLoad", event.canvas.id);
     setAssetLoaded((prevState) => {
       const newState = [...prevState];
       newState[event.canvas.id] = true;
@@ -55,7 +52,7 @@ export default function PresentationView({ loadHandler }: any) {
           <ScaleLoader color="#7b518f" />
         </Box>
       )}
-      <Parallax pages={1}>
+      <Parallax pages={15}>
         <ParallaxLayer offset={0} speed={0.2}>
           <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", zIndex: "1000", marginTop: "-2%" }}>
             <Box sx={{ marginRight: "30%" }} className="titleBox">
@@ -79,21 +76,23 @@ export default function PresentationView({ loadHandler }: any) {
                 </Typography>
               </Box>
               <p>You can find more about my projects</p>
-              <Button sx={{ background: "#C43434", color: "white" }}>
-                <Link to="/projects" style={{ color: "white" }}>
-                  here
-                </Link>
-              </Button>
-              {/* <KeyboardArrowDownIcon sx={{ fontSize: "3em", color: "#FFF" }} className="arrow" onClick={scrollToFirstBlock} /> */}
+              <KeyboardArrowDownIcon sx={{ fontSize: "3em", color: "#FFF" }} className="arrow" onClick={scrollToFirstBlock} />
             </Box>
-            <Box sx={{ width: "50%", height: "100%", zIndex: "2", position: "absolute", right: "0" }} className="box3D redBackground">
+            <Box
+              sx={{ width: "50%", height: "100%", zIndex: "2", position: "absolute", right: "0", cursor: "pointer" }}
+              className="box3D redBackground"
+              onClick={() => {
+                window.open(
+                  "https://www.google.com/maps/@43.6308396,3.8610197,3a,75y,29.56h,84.33t/data=!3m7!1e1!3m5!1svT7YA6fn29govRgXsvZt5A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DvT7YA6fn29govRgXsvZt5A%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D109.92761%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192?entry=ttu",
+                  "_blank"
+                );
+              }}>
               <Spline onLoad={(event) => onLoad(event)} id="0" scene="https://prod.spline.design/NNdEJ1ExxMEgxzW0/scene.splinecode" style={{ transform: "scale(0.7)", zIndex: "100" }} />
             </Box>
           </Box>
         </ParallaxLayer>
-
         {/* My room */}
-        {/* <ParallaxLayer offset={1} speed={0.2} sticky={{ start: 1, end: 2 }} style={{ width: "50%" }} className="box3D">
+        <ParallaxLayer onLoad={(event) => onLoad(event)} id="1" offset={1} speed={0.2} sticky={{ start: 1, end: 2.5 }} style={{ width: "50%" }} className="box3D">
           <Spline ref={firstScene} scene="https://prod.spline.design/iW1m2qgn3bAmXsas/scene.splinecode" style={{ transform: "scale(0.8)" }} />
         </ParallaxLayer>
         <ParallaxLayer offset={1.5} speed={0.2}>
@@ -105,35 +104,54 @@ export default function PresentationView({ loadHandler }: any) {
                 I'm a 20 years old french developper.
               </Typography>
               <Typography variant="subtitle1" color="white" className="paragraph">
-                I love computer science and I'm always looking for new challenges.
+                I love computer science and I'm always looking for new challenges. Currently, I'm an apprentice engineer studying DevOps at Polytech DO. I started in 2022 and will be there until 2025. At Polytech DO, I've been learning both
+                development and operations to get a better understanding of how software development and deployment work in real-life scenarios.
               </Typography>
             </Box>
           </Box>
-        </ParallaxLayer> */}
-
-        {/* Polytech */}
-        {/* <ParallaxLayer offset={3.2} speed={0.2} sticky={{ start: 3.2, end: 4 }} style={{ width: "150%", height: "100%" }} className="box3D">
-          <Spline scene="https://prod.spline.design/XJxCkUSpgZWLVVD5/scene.splinecode" style={{ transform: "scale(0.6)" }} />
         </ParallaxLayer>
-        <ParallaxLayer offset={3.7} speed={0.2}>
-          <Box className="textBox" sx={{ marginLeft: "2%" }}>
-            <h1>Education</h1>
+        {/* System */}
+        <ParallaxLayer offset={4} speed={0.2} sticky={{ start: 4, end: 5 }} style={{ width: "50%", height: "100%", marginLeft: "50vw" }} className="box3D yellowBackground">
+          <Spline scene="https://prod.spline.design/M5fU1KjYCuNDmPra/scene.splinecode" style={{ transform: "scale(0.9)" }} />
+        </ParallaxLayer>
+        <ParallaxLayer offset={4.5} speed={0.2}>
+          <Box className="textBox" sx={{ marginLeft: "2%", border: "2px solid #5296da" }}>
+            <h1>System development</h1>
             <Box sx={{ textAlign: "left", margin: "20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <img src="https://www.polytech.umontpellier.fr/images/formation/do/DO-seul.jpg" alt="DO Polytech logo" className="image" style={{ width: "200px", borderRadius: "100%", padding: "-20px" }} />
+              <img src="https://media.tenor.com/mpW2qB_ufw4AAAAd/ls-command-linux.gif" alt="DO Polytech logo" className="image" style={{ width: "700px", padding: "-20px" }} />
 
-              <Typography variant="subtitle1" color="white" className="paragraph">
-                Currently, I'm an apprentice engineer studying DevOps at Polytech DO. I started in 2022 and will be there until 2025. At Polytech DO, I've been learning both development and operations to get a better understanding of how software
-                development and deployment work in real-life scenarios.
-              </Typography>
+              <ul>
+                <li>
+                  Golang:
+                  <p>
+                    I started learning Golang at polytech by making{" "}
+                    <a href="https://github.com/noetarbouriech/go-jitsu" target="_blank" rel="noopener noreferrer">
+                      Go-Jitsu
+                    </a>
+                    , a remake of the amazing Card-Jitsu game (from club penguin). You can find the rest of my go projects{" "}
+                    <a href="https://cluster-2022-6.dopolytech.fr/projects" target="_blank" rel="noopener noreferrer">
+                      here
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  Rust:
+                  <p>
+                    I love rust and started learning it with amazing courses followed at Polytech, then I started made my first TUI rust game:{" "}
+                    <a href="https://github.com/thomas-mauran/tic-tac-toe" target="_blank" rel="noopener noreferrer">
+                      tic tac toe
+                    </a>{" "}
+                  </p>
+                </li>
+              </ul>
             </Box>
           </Box>
-        </ParallaxLayer> */}
-
+        </ParallaxLayer>
         {/* Frontend */}
-        {/* <ParallaxLayer offset={5} speed={0.2} sticky={{ start: 5, end: 6 }} style={{ width: "50%", height: "100%" }} className="box3D blueBackground">
+        <ParallaxLayer offset={6} speed={0.2} sticky={{ start: 6, end: 7 }} style={{ width: "50%", height: "100%" }} className="box3D blueBackground">
           <Spline scene="https://prod.spline.design/PPW5io9JuCDlXmAk/scene.splinecode" style={{ transform: "scale(1.1)" }} />
         </ParallaxLayer>
-        <ParallaxLayer offset={5.5} speed={0.2}>
+        <ParallaxLayer offset={6.5} speed={0.2}>
           <Box className="textBox" sx={{ marginLeft: "50%", border: "2px solid #50e5db" }}>
             <h1>Web development</h1>
             <img src="https://media.tenor.com/J8o7AxtZiwgAAAAC/www-web.gif" alt="ghibli gif" className="image" />
@@ -175,52 +193,11 @@ export default function PresentationView({ loadHandler }: any) {
               </ul>
             </Box>
           </Box>
-        </ParallaxLayer> */}
-
-        {/* System */}
-        {/* <ParallaxLayer offset={7} speed={0.2} sticky={{ start: 7, end: 8 }} style={{ width: "50%", height: "100%", marginLeft: "50vw" }} className="box3D yellowBackground">
-          <Spline scene="https://prod.spline.design/M5fU1KjYCuNDmPra/scene.splinecode" style={{ transform: "scale(0.9)" }} />
         </ParallaxLayer>
-        <ParallaxLayer offset={7.5} speed={0.2}>
-          <Box className="textBox" sx={{ marginLeft: "2%", border: "2px solid #5296da" }}>
-            <h1>System development</h1>
-            <Box sx={{ textAlign: "left", margin: "20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <img src="https://media.tenor.com/mpW2qB_ufw4AAAAd/ls-command-linux.gif" alt="DO Polytech logo" className="image" style={{ width: "700px", padding: "-20px" }} />
-
-              <ul>
-                <li>
-                  Golang:
-                  <p>
-                    I started learning Golang at polytech by making{" "}
-                    <a href="https://github.com/noetarbouriech/go-jitsu" target="_blank" rel="noopener noreferrer">
-                      Go-Jitsu
-                    </a>
-                    , a remake of the amazing Card-Jitsu game (from club penguin). You can find the rest of my go projects{" "}
-                    <a href="https://cluster-2022-6.dopolytech.fr/projects" target="_blank" rel="noopener noreferrer">
-                      here
-                    </a>
-                  </p>
-                </li>
-                <li>
-                  Rust:
-                  <p>
-                    I love rust and started learning it with amazing courses followed at Polytech, then I started made my first TUI rust game:{" "}
-                    <a href="https://github.com/thomas-mauran/tic-tac-toe" target="_blank" rel="noopener noreferrer">
-                      tic tac toe
-                    </a>{" "}
-                  </p>
-                </li>
-              </ul>
-            </Box>
-          </Box>
-        </ParallaxLayer> */}
 
         {/* Ops */}
-        {/* <ParallaxLayer offset={9} speed={0.2} sticky={{ start: 9, end: 10 }} style={{ width: "50%", height: "100%" }} className="box3D darkBlueBackground">
-          <Spline scene="https://prod.spline.design/OTjPQzdcOju7NHOj/scene.splinecode" style={{ transform: "scale(0.9)" }} />
-        </ParallaxLayer>
-        <ParallaxLayer offset={9.5} speed={0.2}>
-          <Box className="textBox" sx={{ marginLeft: "50%", border: "2px solid #426ee5" }}>
+        <ParallaxLayer offset={8.5} speed={0.2}>
+          <Box className="textBox" sx={{ marginLeft: "2%", border: "2px solid #426ee5" }}>
             <h1>Ops</h1>
             <img src="https://media.tenor.com/ik_Zt6uDZ5IAAAAM/docker-pull-ubuntu.gif" alt="Ops gif" className="image" style={{ width: "300px" }} />
             <Box sx={{ textAlign: "left", margin: "20px" }}>
@@ -232,7 +209,7 @@ export default function PresentationView({ loadHandler }: any) {
                 <li>
                   Docker:
                   <p>
-                    I use docker a lot, I made a lot of docker images that you can find{" "}
+                    I use docker a lot, available{" "}
                     <a href="https://hub.docker.com/u/thomasmauran" target="_blank" rel="noopener noreferrer">
                       here
                     </a>{" "}
@@ -246,7 +223,10 @@ export default function PresentationView({ loadHandler }: any) {
               </ul>
             </Box>
           </Box>
-        </ParallaxLayer> */}
+        </ParallaxLayer>
+        <ParallaxLayer offset={8} speed={0.2} sticky={{ start: 8, end: 9 }} style={{ width: "50%", height: "100%", marginLeft: "50vw" }} className="box3D darkBlueBackground">
+          <Spline scene="https://prod.spline.design/OTjPQzdcOju7NHOj/scene.splinecode" style={{ transform: "scale(0.9)" }} />
+        </ParallaxLayer>
       </Parallax>
     </Box>
   );
