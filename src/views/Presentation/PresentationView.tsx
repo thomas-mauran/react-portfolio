@@ -8,6 +8,7 @@ const Spline = React.lazy(() => import("@splinetool/react-spline"));
 import "./style.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Link } from "react-router-dom";
+import zIndex from "@mui/material/styles/zIndex";
 
 export default function PresentationView({ loadHandler }: any) {
   const [loading, setLoading] = React.useState(true);
@@ -75,25 +76,28 @@ export default function PresentationView({ loadHandler }: any) {
                   👋
                 </Typography>
               </Box>
-              <p>You can find more about my projects</p>
+              <p>Scroll to learn more about me</p>
               <KeyboardArrowDownIcon sx={{ fontSize: "3em", color: "#FFF" }} className="arrow" onClick={scrollToFirstBlock} />
             </Box>
-            <Box
-              sx={{ width: "50%", height: "100%", zIndex: "2", position: "absolute", right: "0", cursor: "pointer" }}
-              className="box3D redBackground"
-              onClick={() => {
-                window.open(
-                  "https://www.google.com/maps/@43.6308396,3.8610197,3a,75y,29.56h,84.33t/data=!3m7!1e1!3m5!1svT7YA6fn29govRgXsvZt5A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DvT7YA6fn29govRgXsvZt5A%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D109.92761%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192?entry=ttu",
-                  "_blank"
-                );
-              }}>
-              <Spline onLoad={(event) => onLoad(event)} id="0" scene="https://prod.spline.design/NNdEJ1ExxMEgxzW0/scene.splinecode" style={{ transform: "scale(0.7)", zIndex: "100" }} />
+            <Box sx={{ width: "60%", marginLeft: "70vw", height: "100%", zIndex: "2", position: "absolute", right: "0", cursor: "pointer" }} className="box3D redBackground">
+              <Spline
+                onLoad={(event) => onLoad(event)}
+                id="0"
+                scene="https://prod.spline.design/NNdEJ1ExxMEgxzW0/scene.splinecode"
+                style={{ transform: "scale(0.6)", zIndex: "100", marginLeft: "20%" }}
+                onClick={() => {
+                  window.open(
+                    "https://www.google.com/maps/@43.6308396,3.8610197,3a,75y,29.56h,84.33t/data=!3m7!1e1!3m5!1svT7YA6fn29govRgXsvZt5A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DvT7YA6fn29govRgXsvZt5A%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D109.92761%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192?entry=ttu",
+                    "_blank"
+                  );
+                }}
+              />
             </Box>
           </Box>
         </ParallaxLayer>
         {/* My room */}
-        <ParallaxLayer onLoad={(event) => onLoad(event)} id="1" offset={1} speed={0.2} sticky={{ start: 1, end: 2.5 }} style={{ width: "50%" }} className="box3D">
-          <Spline ref={firstScene} scene="https://prod.spline.design/iW1m2qgn3bAmXsas/scene.splinecode" style={{ transform: "scale(0.8)" }} />
+        <ParallaxLayer onLoad={(event) => onLoad(event)} id="1" offset={1} speed={0.2} sticky={{ start: 1, end: 2.5 }} style={{ width: "50%", marginRight: "200px", position: "absolute", zIndex: "100" }} className="box3D">
+          <Spline ref={firstScene} scene="https://prod.spline.design/iW1m2qgn3bAmXsas/scene.splinecode" style={{ transform: "scale(0.7)" }} />
         </ParallaxLayer>
         <ParallaxLayer offset={1.5} speed={0.2}>
           <Box className="textBox" sx={{ marginLeft: "50%" }}>
@@ -111,8 +115,8 @@ export default function PresentationView({ loadHandler }: any) {
           </Box>
         </ParallaxLayer>
         {/* System */}
-        <ParallaxLayer offset={4} speed={0.2} sticky={{ start: 4, end: 5 }} style={{ width: "50%", height: "100%", marginLeft: "50vw" }} className="box3D yellowBackground">
-          <Spline scene="https://prod.spline.design/M5fU1KjYCuNDmPra/scene.splinecode" style={{ transform: "scale(0.9)" }} />
+        <ParallaxLayer offset={4} speed={0.2} sticky={{ start: 4, end: 5 }} style={{ width: "100%", height: "100%", marginLeft: "20vw", zIndex: "-100" }} className="box3D yellowBackground">
+          <Spline scene="https://prod.spline.design/M5fU1KjYCuNDmPra/scene.splinecode" style={{ transform: "scale(0.8)" }} />
         </ParallaxLayer>
         <ParallaxLayer offset={4.5} speed={0.2}>
           <Box className="textBox" sx={{ marginLeft: "2%", border: "2px solid #5296da" }}>
@@ -129,7 +133,7 @@ export default function PresentationView({ loadHandler }: any) {
                       Go-Jitsu
                     </a>
                     , a remake of the amazing Card-Jitsu game (from club penguin). You can find the rest of my go projects{" "}
-                    <a href="https://cluster-2022-6.dopolytech.fr/projects" target="_blank" rel="noopener noreferrer">
+                    <a href="/projects" target="_blank" rel="noopener noreferrer">
                       here
                     </a>
                   </p>
@@ -149,7 +153,7 @@ export default function PresentationView({ loadHandler }: any) {
         </ParallaxLayer>
         {/* Frontend */}
         <ParallaxLayer offset={6} speed={0.2} sticky={{ start: 6, end: 7 }} style={{ width: "50%", height: "100%" }} className="box3D blueBackground">
-          <Spline scene="https://prod.spline.design/PPW5io9JuCDlXmAk/scene.splinecode" style={{ transform: "scale(1.1)" }} />
+          <Spline scene="https://prod.spline.design/PPW5io9JuCDlXmAk/scene.splinecode" style={{ transform: "scale(0.9)" }} />
         </ParallaxLayer>
         <ParallaxLayer offset={6.5} speed={0.2}>
           <Box className="textBox" sx={{ marginLeft: "50%", border: "2px solid #50e5db" }}>
@@ -185,7 +189,7 @@ export default function PresentationView({ loadHandler }: any) {
                   React js:
                   <p>
                     We learned and are still using React a lot at Polytech. I made a lot of project that you can find{" "}
-                    <a href="https://cluster-2022-6.dopolytech.fr/projects" target="_blank" rel="noopener noreferrer">
+                    <a href="/projects" target="_blank" rel="noopener noreferrer">
                       here
                     </a>
                   </p>
@@ -199,7 +203,7 @@ export default function PresentationView({ loadHandler }: any) {
         <ParallaxLayer offset={8.5} speed={0.2}>
           <Box className="textBox" sx={{ marginLeft: "2%", border: "2px solid #426ee5" }}>
             <h1>Ops</h1>
-            <img src="https://media.tenor.com/ik_Zt6uDZ5IAAAAM/docker-pull-ubuntu.gif" alt="Ops gif" className="image" style={{ width: "300px" }} />
+            <img src="https://www.inovex.de/wp-content/uploads/2020/05/kubernetes-testing.gif" alt="Ops gif" className="image" style={{ width: "300px" }} />
             <Box sx={{ textAlign: "left", margin: "20px" }}>
               <ul>
                 <li>
@@ -224,8 +228,8 @@ export default function PresentationView({ loadHandler }: any) {
             </Box>
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={8} speed={0.2} sticky={{ start: 8, end: 9 }} style={{ width: "50%", height: "100%", marginLeft: "50vw" }} className="box3D darkBlueBackground">
-          <Spline scene="https://prod.spline.design/OTjPQzdcOju7NHOj/scene.splinecode" style={{ transform: "scale(0.9)" }} />
+        <ParallaxLayer offset={8} speed={0.2} sticky={{ start: 8, end: 9 }} style={{ width: "100%", height: "100%", marginLeft: "25vw", zIndex: "100" }} className="box3D darkBlueBackground">
+          <Spline scene="https://prod.spline.design/OTjPQzdcOju7NHOj/scene.splinecode" style={{ transform: "scale(0.7)" }} />
         </ParallaxLayer>
       </Parallax>
     </Box>

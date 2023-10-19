@@ -29,7 +29,7 @@ export default function HomeView() {
       </Typography>
       {projectByYears.map((year, index) => {
         return (
-          <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "0px 100px" }}>
+          <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <Divider sx={{ borderColor: "white", width: "400px", margin: "20px" }} />
 
             <h2>{year.year}</h2>
