@@ -1,71 +1,69 @@
-import { useState } from "react";
-import { Box, IconButton, Menu, MenuItem, Typography, useMediaQuery } from "@mui/material";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
-import MenuIcon from "@mui/icons-material/Menu";
+import { useState, useEffect } from "react";
+import { Box, IconButton } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Link } from "react-router-dom";
-import AccountBoxIcon from "@mui/icons-material/AccountBox";
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import "./style.css";
+
 export default function Navbar() {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [_, setAnchorEl] = useState(null);
 
-  const handleClick = (event: any) => {
-    setAnchorEl(event.currentTarget);
+  const smoothScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 10; // Adjust this value if needed
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition + offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setAnchorEl(null);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <Box sx={{ position: "fixed", top: 0, left: 20, width: "100%", display: "flex", alignItems: "center", zIndex: "1000" }}>
-      <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }} onClick={handleClick}>
-        <MenuIcon sx={{ color: "#FFF", fontSize: "1.3em" }} />
-      </IconButton>
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "right",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-        PaperProps={{
-          sx: {
-            bgcolor: "#242424",
-            boxShadow: "none",
-          },
-        }}>
-        <MenuItem onClick={handleClose}>
-          <Link to="/projects" style={{ textDecoration: "none", display: "flex" }}>
-            <MenuBookIcon sx={{ margin: "3px 10px", color: "#FFF" }} />
-            <Typography variant="h6" sx={{ fontWeight: "bold", color: "#FFF" }}>
-              Projects
-            </Typography>
+    <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box>
+        <Link to="/" onClick={() => smoothScroll("")} className="NavLink">
+          <h2 className="NavLink">Thomas Mauran</h2>
+        </Link>
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <Box sx={{ display: "flex", marginRight: "20px" }}>
+          <Link to="/" onClick={() => smoothScroll("about")} className="NavLink">
+            about
           </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="/about" style={{ textDecoration: "none", display: "flex" }}>
-            <AccountBoxIcon sx={{ margin: "3px 10px", color: "#FFF" }} />
-
-            <Typography variant="h6" sx={{ fontWeight: "bold", color: "#FFF" }}>
-              About me
-            </Typography>
+          <Link to="/" onClick={() => smoothScroll("projects")} className="NavLink">
+            projects
           </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="/contact" style={{ textDecoration: "none", display: "flex" }}>
-            <AlternateEmailIcon sx={{ margin: "3px 10px", color: "#FFF" }} />
-
-            <Typography variant="h6" sx={{ fontWeight: "bold", color: "#FFF" }}>
-              Contact
-            </Typography>
+          <Link to="/" onClick={() => smoothScroll("contact")} className="NavLink">
+            contact
           </Link>
-        </MenuItem>
-      </Menu>
+        </Box>
+        <Box sx={{ display: "flex" }}>
+          <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://www.linkedin.com/in/thomas-mauran/", "_blank")} sx={{ marginLeft: "20px" }}>
+            <LinkedInIcon sx={{ fontSize: "1.7em" }} />
+          </IconButton>
+          <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://github.com/thomas-mauran/", "_blank")} sx={{ marginLeft: "20px" }}>
+            <GitHubIcon fontSize="large" />
+          </IconButton>
+        </Box>
+      </Box>
     </Box>
   );
 }

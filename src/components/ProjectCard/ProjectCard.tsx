@@ -1,8 +1,7 @@
-import { Box, Typography, Chip } from "@mui/material";
-import { useState } from "react";
+import { Box, Typography } from "@mui/material";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
 import "./style.css";
+import React from "react";
 
 interface ProjectCardProps {
   title: string;
@@ -19,12 +18,15 @@ export default function AddTime(props: ProjectCardProps) {
 
   return (
     <Box className="card" onClick={redirect}>
-      <img src={props.thumbnail} alt={`${props.title} thumbnail`} />
       <Typography variant="h6">{props.title}</Typography>
-      <Box>
-        {props.tags.map((tag, index) => {
-          return <Chip key={index} label={tag} color="primary" sx={{ margin: "5px 10px", borderRadius: "10px" }} />;
-        })}
+      <img src={props.thumbnail} alt={`${props.title} thumbnail`} />
+      <Box sx={{ display: "flex", marginBottom: "20px" }}>
+        {props.tags.map((tag, index) => (
+          <React.Fragment key={index}>
+            <p style={{ margin: "0px 5px" }}>{tag}</p>
+            {index < props.tags.length - 1 && <p style={{ margin: "0px 5px" }}>-</p>}
+          </React.Fragment>
+        ))}
       </Box>
     </Box>
   );

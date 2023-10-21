@@ -1,12 +1,12 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 
 export default function ErrorView() {
-    const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
   return (
-    <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <img src="https://media2.giphy.com/media/ASy3PKVFnk7ZK/giphy.gif?cid=ecf05e47cvhgnya7ib5gl7uep2wbklk9dk5mmb212htrt4sh&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="not found gif ghibli" style={{ borderRadius: "10px" }} />
       <Box sx={{ display: isSmallScreen ? "block" : "flex", marginBottom: "20px" }}>
-      <Typography
+        <Typography
           variant="h2"
           margin="10px"
           fontWeight="bold"
@@ -21,9 +21,9 @@ export default function ErrorView() {
           page not found
         </Typography>
       </Box>
-      <Typography variant="body1" color="white" margin={"20px"} sx={{fontSize: "1.2em"}}>
+      <Typography variant="body1" color="black" margin={"20px"} sx={{ fontSize: "1.2em" }}>
         Bring me back to the{" "}
-        <a href="/home" style={{ color: "#535bf2", textDecoration: "underline" }}>
+        <a href="/" style={{ color: "#535bf2", textDecoration: "underline" }}>
           Home page
         </a>
       </Typography>

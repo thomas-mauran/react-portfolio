@@ -21,7 +21,7 @@ export const projectByYears: year[] = [
         prodUrl: "",
         thumbnailUrl: "https://github.com/thomas-mauran/ATTiny85-Temperature-sensor/raw/main/readme-assets/irl.jpg",
         sourceUrl: "https://github.com/thomas-mauran/ATTiny85-Temperature-sensor",
-        tags: ["ATtiny85", "C++", "Hardware", "MicroController"],
+        tags: ["ATtiny85", "C++", "Hardware"],
       },
       {
         name: "Orka (a simple kubernetes in rust)",
@@ -39,7 +39,7 @@ export const projectByYears: year[] = [
         prodUrl: "",
         thumbnailUrl: "https://avatars.githubusercontent.com/u/135254891?s=200&v=4",
         sourceUrl: "https://github.com/paastech-cloud",
-        tags: ["PaaS", "TypeScript", "Git", "Docker", "containerd", "gRPC"],
+        tags: ["TypeScript", "Docker", "containerd", "gRPC"],
       },
       {
         name: "Cobol guess the number",
@@ -74,7 +74,7 @@ export const projectByYears: year[] = [
         prodUrl: "",
         thumbnailUrl: "https://github.com/thomas-mauran/Polynotes/blob/main/readme-assets/workspace.png?raw=true",
         sourceUrl: "https://github.com/thomas-mauran/Polynotes",
-        tags: ["React", "NestJS", "Mongodb", "Argocd", "Terraform", "Kubernetes"],
+        tags: ["React", "Argocd", "Terraform", "Kubernetes"],
       },
       {
         name: "Time tracker",
@@ -83,7 +83,7 @@ export const projectByYears: year[] = [
         prodUrl: "",
         thumbnailUrl: "https://i.imgur.com/31Np0x0.png",
         sourceUrl: "https://gitlab.polytech.umontpellier.fr/thomas.mauran/timetracker",
-        tags: ["React", "ExpressJS", "Mongodb", "Argocd", "Terraform", "Kubernetes"],
+        tags: ["React", "Argocd", "Terraform", "Kubernetes"],
       },
       {
         name: "Dino machine learning",
@@ -92,7 +92,7 @@ export const projectByYears: year[] = [
         prodUrl: "",
         thumbnailUrl: "https://github.com/thomas-mauran/DinoAI/blob/main/env/assets/readme.gif?raw=true",
         sourceUrl: "https://github.com/thomas-mauran/DinoAI",
-        tags: ["Python", "Gym", "Stable baseline", "Tensorflow"],
+        tags: ["Python", "Gym", "StableBaseline", "Tensorflow"],
       },
     ],
   },
