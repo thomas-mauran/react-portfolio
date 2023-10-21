@@ -17,7 +17,7 @@ export default function AddTime(props: ProjectCardProps) {
   };
 
   return (
-    <Box className="card" onClick={redirect}>
+    <Box className="card" onClick={redirect} data-aos="fade-up">
       <Typography variant="h6">{props.title}</Typography>
       <img src={props.thumbnail} alt={`${props.title} thumbnail`} />
       <Box sx={{ display: "flex", marginBottom: "20px" }}>
