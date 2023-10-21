@@ -69,7 +69,7 @@ export default function ProjectView() {
               <Typography variant="subtitle1" sx={{ fontSize: "1.2em" }} gutterBottom>
                 Production url:
                 <IconButton href={project.prodUrl} target="_blank" rel="noopener noreferrer">
-                  <LanguageIcon sx={{ color: "white", fontSize: "40px" }} />
+                  <LanguageIcon sx={{ color: "black", fontSize: "40px" }} />
                 </IconButton>
               </Typography>
             )}

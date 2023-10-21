@@ -14,7 +14,7 @@ export default function HomeView() {
     <Box sx={{ display: "flex", alignItems: "center", flexDirection: "column", width: "100%", overflowX: "hidden" }}>
       {/* First Block */}
       <Box sx={{ display: "flex", alignItems: "center", height: "100vh", marginTop: "-5%", width: "100%" }}>
-        <Box sx={{ textAlign: "left", marginLeft: "15%", zIndex: "1000" }}>
+        <Box sx={{ textAlign: "left", marginLeft: "15%" }}>
           <Box sx={{ marginBottom: "40px" }}>
             <h1>My name is Thomas Mauran 👋</h1>
             <Typography variant="h5" color="initial">
@@ -25,8 +25,8 @@ export default function HomeView() {
             Let's start
           </a>
         </Box>
-        <Box sx={{ width: "40%", height: "100%", zIndex: "-10", position: "absolute", right: "0", cursor: "pointer" }}>
-          <Spline scene="https://prod.spline.design/NNdEJ1ExxMEgxzW0/scene.splinecode" style={{ transform: "scale(0.6)", zIndex: "-100" }} />
+        <Box sx={{ width: "40%", height: "70%", position: "absolute", right: "0", cursor: "pointer" }}>
+          <Spline scene="https://prod.spline.design/bHVYiCotRyRwnKZp/scene.splinecode" style={{ transform: "scale(1)" }} />
         </Box>
       </Box>
       {/* About me  */}
