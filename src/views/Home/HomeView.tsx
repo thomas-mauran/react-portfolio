@@ -35,7 +35,7 @@ export default function HomeView() {
           </Box>
           {!isSmallScreen && (
             <Box sx={{ width: "40%", height: "70%", position: "absolute", right: "0", cursor: "pointer" }}>
-              <Spline scene="https://prod.spline.design/bHVYiCotRyRwnKZp/scene.splinecode" style={{ transform: "scale(0.7)" }} />
+              <Spline scene="https://prod.spline.design/bHVYiCotRyRwnKZp/scene.splinecode" style={{ transform: "scale(0.8)" }} />
             </Box>
           )}
         </Box>
