@@ -29,3 +29,10 @@
   margin: 10px 5px;
   max-height: 300px;
 }
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 250px;
+    height: 350px;
+  }
+}

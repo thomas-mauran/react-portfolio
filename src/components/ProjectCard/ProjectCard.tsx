@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router";
 import "./style.css";
 import React from "react";
@@ -11,20 +11,23 @@ interface ProjectCardProps {
 
 export default function AddTime(props: ProjectCardProps) {
   const navigate = useNavigate();
+  const isSmallScreen = useMediaQuery("(max-width:900px)");
 
   const redirect = () => {
     navigate(`/project/${props.title}`);
   };
 
   return (
-    <Box className="card" onClick={redirect} data-aos="fade-up">
-      <Typography variant="h6">{props.title}</Typography>
+    <Box className="card" onClick={redirect} data-aos={isSmallScreen ? "" : "fade-up"}>
+      <Typography variant="h6" align="center">
+        {props.title}
+      </Typography>
       <img src={props.thumbnail} alt={`${props.title} thumbnail`} />
-      <Box sx={{ display: "flex", marginBottom: "20px" }}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", marginBottom: "20px", alignItems: "center", justifyContent: "center" }}>
         {props.tags.map((tag, index) => (
           <React.Fragment key={index}>
-            <p style={{ margin: "0px 5px" }}>{tag}</p>
-            {index < props.tags.length - 1 && <p style={{ margin: "0px 5px" }}>-</p>}
+            <Typography style={{ margin: "0px 5px" }}>{tag}</Typography>
+            {index < props.tags.length - 1 && <Typography style={{ margin: "0px 5px" }}>-</Typography>}
           </React.Fragment>
         ))}
       </Box>
