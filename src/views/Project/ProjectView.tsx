@@ -53,7 +53,7 @@ export default function ProjectView() {
         </Box>
 
         <Box sx={{ width: isSmallScreen ? "100vw" : "50vw" }}>
-          <img src={project.thumbnailUrl} alt={project.name} style={{ width: isSmallScreen ? "10px" : "35vh", borderRadius: "10px", minWidth: "200px", margin: "40px", boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.4)" }} />
+          <img src={project.thumbnailUrl} alt={project.name} style={{ width: isSmallScreen ? "10px" : "50vh", borderRadius: "10px", maxWidth: "600px", margin: "40px", boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.4)" }} />
           <Box mr={isSmallScreen ? 0 : 20} sx={{ display: isSmallScreen ? "flex" : "none", flexDirection: "column", alignItems: "center" }}>
             <Typography variant="subtitle1" sx={{ fontSize: "1.2em", textAlign: "left", margin: "40px" }} gutterBottom>
               <b>Description: </b>
