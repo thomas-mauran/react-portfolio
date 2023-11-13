@@ -16,10 +16,18 @@ export const projectByYears: year[] = [
     year: "2023",
     projects: [
       {
+        name: "PyrOS",
+        description: "Pyros is a project to learn about kernel development. The goal is to be able to boot a simple kernel with some basic functions",
+        prodUrl: "",
+        thumbnailUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kernel_Layout.svg/800px-Kernel_Layout.svg.png",
+        sourceUrl: "https://github.com/thomas-mauran/PyrOS",
+        tags: ["Assembly", "C", "Kernel"],
+      },
+      {
         name: "ATTiny85 temperature sensor project",
         description: "Simple ATtiny project to learn how the micro controller works. I connected a small OLed lcd screen and a BMP280 sensor to get the temperature",
         prodUrl: "",
-        thumbnailUrl: "https://github.com/thomas-mauran/ATTiny85-Temperature-sensor/raw/main/readme-assets/irl.jpg",
+        thumbnailUrl: "https://raw.githubusercontent.com/thomas-mauran/ATTiny85-Temperature-sensor/main/readme-assets/oled.jpg",
         sourceUrl: "https://github.com/thomas-mauran/ATTiny85-Temperature-sensor",
         tags: ["ATtiny85", "C++", "Hardware"],
       },
