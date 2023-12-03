@@ -16,6 +16,14 @@ export const projectByYears: year[] = [
     year: "2023",
     projects: [
       {
+        name: "Chess-tui",
+        description: "A chess Terminal UI game made in rust",
+        prodUrl: "",
+        thumbnailUrl: "https://raw.githubusercontent.com/thomas-mauran/chess-tui/main/examples/demo.gif",
+        sourceUrl: "https://github.com/thomas-mauran/chess-tui",
+        tags: ["Rust", "TUI", "Open-source"],
+      },
+      {
         name: "PyrOS",
         description: "Pyros is a project to learn about kernel development. The goal is to be able to boot a simple kernel with some basic functions",
         prodUrl: "",
