@@ -111,7 +111,7 @@ export default function HomeView() {
               <Box sx={{ display: "flex", marginBottom: "30px" }} data-aos={isSmallScreen ? "" : "fade-right"}>
                 <LocalPhoneIcon sx={{ marginRight: "10px", marginTop: "auto", marginBottom: "auto" }} />
                 <Typography variant="h6" color="initial" sx={{ fontSize: isSmallScreen ? "1em" : "1.2em" }}>
-                  +33 06 52 86 55 22
+                  +33 06 95 15 48 70
                 </Typography>
               </Box>
               <Box sx={{ display: "flex", marginBottom: "30px" }} data-aos={isSmallScreen ? "" : "fade-right"}>
