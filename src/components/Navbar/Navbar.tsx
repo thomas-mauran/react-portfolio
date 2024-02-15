@@ -62,7 +62,7 @@ export default function Navbar() {
               <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://www.linkedin.com/in/thomas-mauran/", "_blank")} sx={{ marginLeft: "20px" }}>
                 <LinkedInIcon sx={{ fontSize: "1.7em" }} />
               </IconButton>
-              <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://github.com/thomas-mauran/", "_blank")} sx={{ marginLeft: "20px" }}>
+              <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://github.com/thomas-mauran/", "_blank")} sx={{ marginLeft: "20px", marginRight: "20px" }}>
                 <GitHubIcon fontSize="large" />
               </IconButton>
             </Box>
