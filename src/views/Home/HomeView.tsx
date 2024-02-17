@@ -114,7 +114,7 @@ export default function HomeView() {
                 Working on multiple projects as a fullstack developer to provide a large variety of features.
                 <br />
                 <br />
-                <b>2020:</b> 3 month internship at CIRAD research center
+                <b>2020:</b> 3 months internship at CIRAD research center
                 <br />
                 Short internship where I designed and created a wikipedia like platform to handle plasmid classification for the research team.
               </p>
@@ -136,7 +136,7 @@ export default function HomeView() {
               <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
                 <br />
                 <b>Astronomy / Physics:</b>
-                <br />I am very interested by science in general especially physics and astronomy. I have been reading a lot of great books by stephen hawkings and etienne klein about those subjects and wish to be able to work in that field later as
+                <br />I am very interested by science in general especially physics and astronomy. I have been reading a lot of great books by Stephen Hawkings and Etienne Klein about those subjects and wish to be able to work in that field later as
                 a computer engineer. I also have an old 114/900 newtonian telescope that I am learning how to use.
               </p>
             </Box>
