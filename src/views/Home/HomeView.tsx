@@ -138,6 +138,10 @@ export default function HomeView() {
                 <b>Astronomy / Physics:</b>
                 <br />I am very interested by science in general especially physics and astronomy. I have been reading a lot of great books by Stephen Hawkings and Etienne Klein about those subjects and wish to be able to work in that field later as
                 a computer engineer. I also have an old 114/900 newtonian telescope that I am learning how to use.
+                <br />
+                I also have a small blog where I write about my discoveries in the field of astronomy / physics.
+                <br />
+                Blog: <a href="https://astro.thomas-mauran.com/">Astro-blog</a>
               </p>
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
