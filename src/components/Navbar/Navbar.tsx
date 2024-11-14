@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Box, IconButton, useMediaQuery } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import RssFeedIcon from '@mui/icons-material/RssFeed';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -43,27 +44,42 @@ export default function Navbar() {
           {" "}
           <Box>
             <Link to="/" onClick={() => smoothScroll("")} className="NavLink">
-              <h2 className="NavLink">Thomas Mauran</h2>
+              <h2 className="NavLink">My portfolio</h2>
             </Link>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Box sx={{ display: "flex", marginRight: "20px" }}>
               <Link to="/" onClick={() => smoothScroll("about")} className="NavLink">
-                about
+                About
+              </Link>
+              <Link to="/" onClick={() => smoothScroll("education")} className="NavLink">
+                Education
+              </Link>
+              <Link to="/" onClick={() => smoothScroll("experiences")} className="NavLink">
+                Experiences
+              </Link>
+              <Link to="/" onClick={() => smoothScroll("hobbies")} className="NavLink">
+                Hobbies
               </Link>
               <Link to="/" onClick={() => smoothScroll("projects")} className="NavLink">
-                projects
+               Projects
+              </Link>
+              <Link to="/" onClick={() => smoothScroll("contributions")} className="NavLink">
+               Contributions
               </Link>
               <Link to="/" onClick={() => smoothScroll("contact")} className="NavLink">
-                contact
+                Contact
               </Link>
             </Box>
             <Box sx={{ display: "flex" }}>
               <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://www.linkedin.com/in/thomas-mauran/", "_blank")} sx={{ marginLeft: "20px" }}>
                 <LinkedInIcon sx={{ fontSize: "1.7em" }} />
               </IconButton>
-              <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://github.com/thomas-mauran/", "_blank")} sx={{ marginLeft: "20px", marginRight: "20px" }}>
-                <GitHubIcon fontSize="large" />
+              <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://github.com/thomas-mauran/", "_blank")} sx={{ marginLeft: "20px" }}>
+                <GitHubIcon fontSize="large" sx={{ fontSize: "1.7em" }}  />
+              </IconButton>
+              <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://astro.thomas-mauran.com/", "_blank")} sx={{ marginLeft: "20px", marginRight: "20px" }}>
+                <RssFeedIcon fontSize="large" sx={{ fontSize: "1.7em" }} />
               </IconButton>
             </Box>
           </Box>

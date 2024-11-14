@@ -1,3 +1,17 @@
+.purple {
+  color: #535bf2;
+}
+
+.hover-picture {
+  transform: scale(1);
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.hover-picture:hover {
+  transform: scale(1.05);
+}
+
 .StartBtn {
   border-radius: 69% 31% 87% 13% / 48% 63% 37% 52%;
   padding: 20px 30px;

@@ -9,6 +9,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { Link } from "react-router-dom";
 
 export default function HomeView() {
   const isSmallScreen = useMediaQuery("(max-width:900px)");
@@ -55,10 +56,12 @@ export default function HomeView() {
             <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginLeft: isSmallScreen ? 0 : "30%", zIndex: "100" }}>
               <h1 data-aos={isSmallScreen ? "" : "fade-up"}>About me</h1>
               <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
-                I'm a 21 years old french developper.
+                I'm a 22 years old french developper.
                 <br />
-                <br /> I love computer science and I'm always looking for new challenges. I currently am an apprentice engineer studying DevOps and Software Development in general at Polytech Montpellier. I started in 2022 and will be there until
-                2025. At Polytech, I've been learning both development and operations to get a better understanding of how software development and deployment work in real-life scenarios.
+                <br /> I love computer science and I'm always looking for new challenges. I currently am an apprentice engineer studying <b className="purple">DevOps</b> and Software Development in general at Polytech Montpellier. I started in 2022
+                and will be there until 2025.
+                <br />
+                In life I am <b className="purple">curious</b> and willing to learn anything new especially when it is related to science or history.
               </p>
             </Box>
           </Box>
@@ -73,7 +76,7 @@ export default function HomeView() {
       <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", width: "100vw" }} id="education">
         <Box sx={{ display: "flex", alignItems: "center", height: isSmallScreen ? "100vh" : "100vh", zIndex: 1000, width: "100%", backgroundColor: "#FFFFFF" }} id="about">
           <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "" }}>
-            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "30%", zIndex: "100" }}>
+            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "20%", zIndex: "100" }}>
               <h1 data-aos={isSmallScreen ? "" : "fade-up"}>Education</h1>
               <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
                 <br />
@@ -88,7 +91,7 @@ export default function HomeView() {
               </p>
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
-              <img src="./mac.jpg" alt="Old Macintosh" style={{ width: isSmallScreen ? "200px" : "400px", borderRadius: "10px", boxShadow: "4px 4px 20px -3px #000000" }} />
+              <img src="./fac.jpg" alt="Old Macintosh" style={{ width: isSmallScreen ? "300px" : "500px", borderRadius: "10px", boxShadow: "4px 4px 20px -3px #000000" }} />
             </Box>
           </Box>
         </Box>
@@ -100,27 +103,98 @@ export default function HomeView() {
       </Box>
       {/* Experiences */}
       <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", backgroundColor: "#F5F5F5", width: "100vw" }} id="experiences">
-        <Box sx={{ display: "flex", alignItems: "center", height: isSmallScreen ? "100vh" : "100vh", zIndex: 1000, width: "100%", backgroundColor: "#F5F5F5" }} id="about">
+        <Box sx={{ display: "flex", alignItems: "center", marginTop: "100px", height: isSmallScreen ? "100vh" : "100vh", zIndex: 1000, width: "100%", backgroundColor: "#F5F5F5" }} id="about">
           <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "" }}>
-            <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
-              <img src="./office.jpeg" alt="office picture" style={{ width: isSmallScreen ? "200px" : "400px", borderRadius: "10px", boxShadow: "4px 4px 20px -3px #000000" }} />
-            </Box>
-            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginLeft: isSmallScreen ? 0 : "30%", zIndex: "100" }}>
+            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "20%", zIndex: "100" }}>
               <h1 data-aos={isSmallScreen ? "" : "fade-up"}>Experiences</h1>
               <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
                 <br />
-                <b>2022-2025:</b> Fullstack apprentice for <a href="https://kuzzle.io/fr/">Kuzzle</a>
+                <b>Summer 2024 - CERN Openlab internship</b>
                 <br />
-                Working on multiple projects as a fullstack developer to provide a large variety of features.
+                During the summer of 2024 I had the immense chance to be selected in the{" "}
+                <a href="https://openlab.cern/" style={{ textDecoration: "underline" }}>
+                  Openlab summer student program
+                </a>{" "}
+                to work at <b className="purple">CERN</b>.
+                <br />
+                As a big fan of physics and astronomy, this was a dream come true for me.
+                <br />
+                <br />I worked on the{" "}
+                <a href="https://cds.cern.ch/record/2906873" style={{ textDecoration: "underline" }}>
+                  Evaluation of Apache Knox with CERN SSO
+                </a>
+                . The project went smoothly and I had the time to go further than the evaluation and implement a major part of the solution which is now running in production.
                 <br />
                 <br />
-                <b>2020:</b> 3 months internship at CIRAD research center
+                This intership was an amazing experience, I was surrounded by very interesting people from all around the world, I was in the middle of the biggest scientific experiment in the world and I had the chance to work on a project that will
+                be used by thousands of people.
                 <br />
-                Short internship where I designed and created a wikipedia like platform to handle plasmid classification for the research team.
+                The Openlab program also allowed me to visit multiple experiments such as <i>ATLAS and ALICE control centers </i>, <i> the Proton Sychrotron</i>, <i>LINAC 1</i>, <i>CCC</i> and the <i>Antimatter factory</i>
+                <br />
+                On top of that we have been able to attend tons of conferences and participates in multiple workshops.
+              </p>
+            </Box>
+            <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
+              <img
+                src="./me-cern.png"
+                alt="Me at CERN"
+                style={{ width: isSmallScreen ? "200px" : "500px", borderRadius: "10px", boxShadow: "4px 4px 20px -3px #000000", marginBottom: "40px", marginTop: "40px" }}
+                className="hover-picture"
+                onClick={() => (window.location.href = "https://openlab.cern/news/20-aug-2024/fostering-future-careers-stem-through-cern-openlab-summer-student-programme")}
+              />
+            </Box>
+          </Box>
+        </Box>
+        <Box sx={{ display: "flex", alignItems: "center", height: isSmallScreen ? "100vh" : "80vh", zIndex: 1000, width: "100%", backgroundColor: "#F5F5F5", marginTop: "50px" }} id="about">
+          <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "" }}>
+            <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
+              <img src="./kuzzle.webp" alt="Kuzzle logo" style={{ width: isSmallScreen ? "200px" : "400px", borderRadius: "10px", marginTop: "50%" }} className="hover-picture" onClick={() => (window.location.href = "https://kuzzle.io/fr/")} />
+            </Box>
+            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginLeft: isSmallScreen ? 0 : "20%", zIndex: "100" }}>
+              <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
+                <br />
+                <b>2022 - 2025: Apprenticeship at Kuzzle</b>
+                <br />
+                From 2022 to 2025 I have been working as a fullstack developer apprentice at Kuzzle.
+                <br />
+                Kuzzle is originally a french startup that provides an opensource backend solution, with the years we also developed a SaaS solution called the Iot-platform that allows our customers to aggregate and analyze their Iot data in a single
+                platform.
+                <br />
+                <br />
+                Throughout the years I have been working on multiple projects such as client projects (SPIE, Omniscient, Ales city, Eiffage), internal tools, and the Iot-platform itself.
+                <br />
+                <br />I have been learning a lot about the software development process, the DevOps culture and how to efficiently work and release software in a team.
               </p>
             </Box>
           </Box>
         </Box>
+        <Box sx={{ display: "flex", alignItems: "center", height: isSmallScreen ? "100vh" : "80vh", zIndex: 1000, width: "100%", backgroundColor: "#F5F5F5" }} id="about">
+          <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "" }}>
+            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "20%", zIndex: "100" }}>
+              <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
+                <br />
+                <b>2022 - Fullstack internship</b>
+                <br />
+                The CIRAD (International Cooperation Center for Agricultural Research for Development) is a french research center that works on multiple projects to help developping countries.
+                <br />
+                <br />
+                I was able to work there for 3 months as a fullstack developer. I designed and created a wikipedia like platform to handle plasmid classification for the research team.
+                <br />
+                This internship was a very good experience for me, I was able to work work closely with real clients (the biologists) to really provide them a tool suitable for their needs.
+              </p>
+            </Box>
+            <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
+              <img
+                src="./cirad.png"
+                alt="Cirad logo"
+                style={{ width: isSmallScreen ? "200px" : "500px", borderRadius: "10px", marginBottom: "40px", marginTop: "25%" }}
+                className="hover-picture"
+                onClick={() => (window.location.href = "https://www.cirad.fr/")}
+              />
+            </Box>
+          </Box>
+        </Box>
+
         <div className="custom-shape-divider-bottom-23">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
@@ -131,21 +205,34 @@ export default function HomeView() {
       <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }} id="hobbies">
         <Box sx={{ display: "flex", alignItems: "center", height: isSmallScreen ? "100vh" : "80vh", zIndex: 1000, width: "100%", backgroundColor: "#FFFFFF" }} id="about">
           <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "" }}>
-            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "30%", zIndex: "100" }}>
+            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "20%", zIndex: "100" }}>
               <h1 data-aos={isSmallScreen ? "" : "fade-up"}>Hobbies</h1>
               <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
                 <br />
-                <b>Astronomy / Physics:</b>
+                <b>Astrophotography / Physics:</b>
                 <br />I am very interested by science in general especially physics and astronomy. I have been reading a lot of great books by Stephen Hawkings and Etienne Klein about those subjects and wish to be able to work in that field later as
-                a computer engineer. I also have an old 114/900 newtonian telescope that I am learning how to use.
+                a computer engineer. I also have an astrophotography setup that I use to take pictures of the sky such as the helix nebula you see here.
+                <br />I post every picture that I take on this the following{" "}
+                <a href="https://astro.thomas-mauran.com/" className="purple">
+                  blog
+                </a>
                 <br />
-                I also have a small blog where I write about my discoveries in the field of astronomy / physics.
-                <br />
-                Blog: <a href="https://astro.thomas-mauran.com/">Astro-blog</a>
               </p>
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
-              <img src="./scope.jpeg" alt="Profile picture made by midjourney" style={{ width: isSmallScreen ? "200px" : "400px", borderRadius: "10px", boxShadow: "4px 4px 20px -3px #000000", marginBottom: "40px", marginTop: "40px" }} />
+              <img
+                src="./helix.png"
+                alt="Helix nebula shot I made"
+                style={{
+                  width: isSmallScreen ? "200px" : "500px",
+                  borderRadius: "10px",
+                  boxShadow: "4px 4px 20px -3px #000000",
+                  marginBottom: "40px",
+                  marginTop: "40px",
+                }}
+                className="hover-picture"
+                onClick={() => (window.location.href = "https://astro.thomas-mauran.com/p/helix-nebula/")}
+              />
             </Box>
           </Box>
         </Box>
@@ -187,16 +274,28 @@ export default function HomeView() {
         <Box sx={{ display: "flex", alignItems: "center", height: isSmallScreen ? "100vh" : "80vh", zIndex: 1000, width: "100%", backgroundColor: "#FFFFFF" }} id="about">
           <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "" }}>
             <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
-              <img src="./chess.jpg" alt="Profile picture made by midjourney" style={{ width: isSmallScreen ? "200px" : "400px", borderRadius: "10px", boxShadow: "4px 4px 20px -3px #000000" }} />
+              <img src="./books.jpg" alt="Profile picture made by midjourney" style={{ width: isSmallScreen ? "200px" : "400px", borderRadius: "10px", boxShadow: "4px 4px 20px -3px #000000" }} />
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginLeft: isSmallScreen ? 0 : "30%", zIndex: "100" }}>
               <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
-                <b>Chess:</b>
-                <br />
-                I'm really into chess and I play it whenever I can in my free time. Recently, I've been working on this cool project called chess-tui in Rust. You can find more info about it <a href="/project/Chess-tui">here</a>. It's been a great
-                way to dive deeper into the game and coding at the same time.
+                <b>Reading:</b>
+                <br />I love reading, especially physics or astronomy related. Among my top favorite I would put <i>A brief history of time</i> by Stephen Hawkings, <i>La nouvelle physique</i> from Yann Mambrini but also <i>Le prince</i> from
+                Machiavel.
                 <br />
               </p>
+            </Box>
+          </Box>
+        </Box>
+        <Box sx={{ display: "flex", alignItems: "center", height: isSmallScreen ? "100vh" : "80vh", zIndex: 1000, width: "100%", backgroundColor: "#FFFFFF" }} id="about">
+          <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "" }}>
+            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "30%", zIndex: "100" }}>
+              <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
+                <b>Hiking:</b>
+                <br />I love hiking and being in the nature, during my CERN internship in Switzerland I had the chance to hike and do bivouacs in the Alps which was an amazing experience.
+              </p>
+            </Box>
+            <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
+              <img src="./hiking.png" alt="french horn on a music sheet" style={{ width: isSmallScreen ? "200px" : "400px", borderRadius: "10px", boxShadow: "4px 4px 20px -3px #000000", marginBottom: "40px" }} />
             </Box>
           </Box>
         </Box>
@@ -231,9 +330,107 @@ export default function HomeView() {
           </svg>
         </div>
       </Box>
+      {/* Contributions */}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "85vh",
+          zIndex: 1000,
+          width: "100%",
+          backgroundColor: "#FFFFFF",
+          marginTop: 10,
+        }}
+        id="contributions">
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            padding: "0 10%",
+            marginTop: "-2%",
+            flexDirection: isSmallScreen ? "column" : "row",
+          }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+              width: "100%",
+            }}>
+            <h1>Contributions</h1>
 
+            <Box sx={{ marginBottom: 3, marginTop: "20px", textAlign: "left", width: "100%" }}>
+              <h2 style={{ marginBottom: 20 }}>Open Source:</h2>
+              <p>
+                <div style={{ marginBottom: 20 }} data-aos="fade-right">
+                  <b>Chess TUI:</b>{" "}
+                  <Link to="https://github.com/thomas-mauran/chess-tui" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline"}}>
+                    GitHub Repository
+                  </Link>{" "}
+                  (Rust)
+                  <br />
+                  <u>Description:</u> I created and am maintaining a Chess-tui wich is a terminal chess game written in Rust.
+                </div>
+                <div style={{ marginBottom: 20 }} data-aos="fade-right">
+                  <b>Node JS:</b>{" "}
+                  <Link to="https://github.com/nodejs/node/pull/52225" target="_blank" rel="noopener noreferrer">
+                    PR #52225
+                  </Link>{" "}
+                  (JS)
+                  <br />
+                  <u>Description:</u> Node JS is a runtime environment that allows you to run JavaScript on the server side. I contributed to the project by adding custom log message when using the .load and .save method of the repl when no file was
+                  provided.
+                </div>
+                <div style={{ marginBottom: 20 }} data-aos="fade-right">
+                  <b>NASA/harmony:</b>{" "}
+                  <Link to="https://github.com/nasa/harmony/pull/647" target="_blank" rel="noopener noreferrer">
+                    PR #647
+                  </Link>{" "}
+                  (JS)
+                  <br />
+                  <u>Description:</u> Harmony is a project from NASA that aims to provide a platform for the scientific community to access and analyze Earth Science data. I contributed to the project by removing nodemon dependency and using the node
+                  --watch flag instead.
+                </div>
+              </p>
+            </Box>
+
+            <Box sx={{ marginBottom: 3, marginTop: "20px", textAlign: "left", width: "100%" }}>
+              <h2 style={{ marginBottom: 20 }}>Wikipedia:</h2>
+
+              <p>
+                <div style={{ marginBottom: 20 }} data-aos="fade-right">
+                  <strong>Toshifumi Hinata:</strong>{" "}
+                  <Link to="https://fr.wikipedia.org/wiki/Toshifumi_Hinata#" target="_blank" rel="noopener noreferrer">
+                    Article
+                  </Link>
+                  <br />
+                  <u>Description:</u> I created the wikipedia page of Toshifumi Hinata, a famous japanese composer that I enjoy listening to.
+                </div>
+                <div style={{ marginBottom: 20 }} data-aos="fade-right">
+                  <strong>Hommage à confucius:</strong>{" "}
+                  <Link to="https://fr.wikipedia.org/wiki/Hommage_%C3%A0_Confucius" target="_blank" rel="noopener noreferrer">
+                    Article
+                  </Link>
+                  <br />
+                  <u>Description:</u> I modified the wikipedia page of the french art statue "Hommage à Confucius" to add a picture and a commonly used name.
+                </div>
+              </p>
+            </Box>
+          </Box>
+        </Box>
+        
+      </Box>
+      <div className="custom-shape-divider-bottom-1697903916">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+          </svg>
+        </div>
       {/* Contact  */}
-      <Box sx={{ display: "flex", alignItems: "center", height: "85vh", zIndex: 1000, width: "100%", backgroundColor: "#FFFFFF" }} id="contact">
+      <Box sx={{ display: "flex", alignItems: "center", height: "85vh", zIndex: 1000, width: "100%", backgroundColor: "#F5F5F5" }} id="contact">
         <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", marginTop: "-2%", flexDirection: isSmallScreen ? "column" : "row" }}>
           <Box sx={{ display: "flex", flexDirection: "column", textAlign: "left", alignItems: isSmallScreen ? "center" : "" }}>
             <h1 style={{}} data-aos={isSmallScreen ? "" : "fade-up"}>
@@ -250,13 +447,7 @@ export default function HomeView() {
               </Box>
             )}
             <Box sx={{ marginTop: "20px" }}>
-              <Box sx={{ display: "flex", marginBottom: "30px" }} data-aos={isSmallScreen ? "" : "fade-right"}>
-                <LocalPhoneIcon sx={{ marginRight: "10px", marginTop: "auto", marginBottom: "auto" }} />
-                <Typography variant="h6" color="initial" sx={{ fontSize: isSmallScreen ? "1em" : "1.2em" }}>
-                  +33 06 95 15 48 70
-                </Typography>
-              </Box>
-              <Box sx={{ display: "flex", marginBottom: "30px" }} data-aos={isSmallScreen ? "" : "fade-right"}>
+              <Box sx={{ display: "flex", marginBottom: "40px" }} data-aos={isSmallScreen ? "" : "fade-right"}>
                 <EmailIcon sx={{ marginRight: "10px", marginTop: "auto", marginBottom: "auto" }} />
                 <Typography variant="h6" color="initial" sx={{ fontSize: isSmallScreen ? "1em" : "1.2em" }}>
                   thomas.mauran@etu.umontpellier.fr
@@ -282,7 +473,7 @@ export default function HomeView() {
           )}
         </Box>
       </Box>
-      <Box sx={{ backgroundColor: "#ffffff", width: "100%" }}>
+      <Box sx={{ backgroundColor: "#F5F5F5", width: "100%" }}>
         <p>Made with ❤️ by Thomas Mauran © 2024</p>
       </Box>
     </Box>
