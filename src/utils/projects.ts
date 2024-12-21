@@ -19,7 +19,7 @@ export const projectByYears: year[] = [
         name: "Chess-tui",
         description: "A chess Terminal UI game made in rust",
         prodUrl: "",
-        thumbnailUrl: "https://raw.githubusercontent.com/thomas-mauran/chess-tui/main/examples/demo.gif",
+        thumbnailUrl: "https://raw.githubusercontent.com/thomas-mauran/chess-tui/main/examples/play_against_white_bot.gif",
         sourceUrl: "https://github.com/thomas-mauran/chess-tui",
         tags: ["Rust", "TUI", "Open-source"],
       },
