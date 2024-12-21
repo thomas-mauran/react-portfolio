@@ -72,13 +72,13 @@ export default function Navbar() {
               </Link>
             </Box>
             <Box sx={{ display: "flex" }}>
-              <IconButton className="IcoButton" aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://www.linkedin.com/in/thomas-mauran/", "_blank")} sx={{ marginLeft: "20px" }}>
+              <IconButton className="IcoButton" aria-controls="simple-menu" aria-haspopup="true" href="https://www.linkedin.com/in/thomas-mauran/" target="_blank" sx={{ marginLeft: "20px" }}>
                 <LinkedInIcon sx={{ fontSize: "1.7em" }} />
               </IconButton>
-              <IconButton className="IcoButton" aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://github.com/thomas-mauran/", "_blank")} sx={{ marginLeft: "20px" }}>
+              <IconButton className="IcoButton" aria-controls="simple-menu" aria-haspopup="true" href="https://github.com/thomas-mauran/" target="_blank" sx={{ marginLeft: "20px" }}>
                 <GitHubIcon fontSize="large" sx={{ fontSize: "1.7em" }}  />
               </IconButton>
-              <IconButton className="IcoButton" aria-controls="simple-menu" aria-haspopup="true" onClick={() => window.open("https://astro.thomas-mauran.com/", "_blank")} sx={{ marginLeft: "20px", marginRight: "20px" }}>
+              <IconButton className="IcoButton" aria-controls="simple-menu" aria-haspopup="true" href="https://astro.thomas-mauran.com/" target="_blank" sx={{ marginLeft: "20px", marginRight: "20px" }}>
                 <RssFeedIcon fontSize="large" sx={{ fontSize: "1.7em" }} />
               </IconButton>
             </Box>
