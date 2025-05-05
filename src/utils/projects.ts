@@ -13,7 +13,20 @@ export interface project {
 
 export const projectByYears: year[] = [
   {
-    year: "2023",
+    year: "2025",
+    projects: [
+      {
+        name: "Nihondex",
+        description: "An innovative, gamified platform designed to make learning Japanese both effective and enjoyable. It offers a comprehensive suite of tools tailored for learners at all levels, from complete beginners to those preparing for the JLPT N1 exam. Features include interactive Kana lessons with writing practice, a smart vocabulary system using spaced repetition, grammar mastery covering JLPT N5 to N1, conjugation drills, and reading practice with comprehension quizzes. The platform includes a unique gamification system where users build and customize a floating island as they progress, unlocking decorations and tracking achievements. Progress tracking features monitor learning with detailed statistics, including over 7,500 vocabulary words, 4,000+ kanji characters, 800+ grammar patterns, and 45,000+ example sentences. Built with Vue.js and NestJS, with infrastructure managed through Kubernetes and Terraform, and monitoring via Grafana.",
+        prodUrl: "https://nihondex.com",
+        thumbnailUrl: "https://nihondex.com/_nuxt/island.Xr7EFBj6.png",
+        sourceUrl: "https://github.com/thomas-mauran/nihondex",
+        tags: ["Vue.js", "NestJS", "Kubernetes", "Terraform", "Grafana", "Japanese", "API Integration"],
+      },
+    ],
+  },
+  {
+    year: "2023-2024",
     projects: [
       {
         name: "Chess-tui",
