@@ -10,20 +10,38 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export default function ProjectView() {
   const [project, setProject] = useState<project>({} as project);
+  const [isLoading, setIsLoading] = useState(true);
   const isSmallScreen = useMediaQuery("(max-width:900px)");
   const isMobile = useMediaQuery("(max-width:600px)");
 
   const params = useParams();
 
   useEffect(() => {
+    setIsLoading(true);
     projectByYears.map((year) => {
       year.projects.map((project) => {
         if (project.name === params.title) {
           setProject(project);
+          setIsLoading(false);
         }
       });
     });
   }, [params.title]);
+
+  if (isLoading) {
+    return (
+      <Box sx={{ 
+        display: "flex", 
+        alignItems: "center", 
+        justifyContent: "center",
+        width: "100%", 
+        height: "100vh",
+        backgroundColor: "#F5F5F5"
+      }}>
+        <Typography variant="h6">Loading...</Typography>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={{ 
@@ -34,11 +52,11 @@ export default function ProjectView() {
       overflowX: "hidden",
       backgroundColor: "#F5F5F5",
       minHeight: "100vh",
-      pt: isMobile ? 0 : 4
+      pt: isMobile ? 0 : 8
     }}>
       <Container maxWidth="lg" sx={{ 
-        py: isMobile ? 0 : 4,
-        px: isMobile ? 0 : 4
+        py: isMobile ? 0 : 8,
+        px: isMobile ? 0 : 6
       }}>
         {/* Mobile Header */}
         {isMobile && (
@@ -74,7 +92,7 @@ export default function ProjectView() {
                 fontSize: "1.2em",
                 flex: 1,
                 textAlign: "center",
-                mr: 4 // To offset the back button
+                mr: 4
               }}
             >
               {project.name}
@@ -86,7 +104,7 @@ export default function ProjectView() {
         {!isMobile && (
           <Box sx={{ 
             position: "relative", 
-            mb: 4,
+            mb: 6,
             mt: 2
           }}>
             {isSmallScreen && (
@@ -126,9 +144,10 @@ export default function ProjectView() {
           sx={{ 
             display: "flex", 
             flexDirection: isSmallScreen ? "column" : "row",
-            gap: isMobile ? 0 : 4,
-            alignItems: "flex-start",
-            padding: isMobile ? 0 : "0 10%"
+            gap: isSmallScreen ? 0 : 12,
+            alignItems: isSmallScreen ? "center" : "flex-start",
+            padding: isMobile ? 0 : "0 8%",
+            mt: isSmallScreen ? 0 : 4
           }}
         >
           {/* Project Image */}
@@ -136,16 +155,21 @@ export default function ProjectView() {
             sx={{ 
               flex: 1,
               overflow: "hidden",
-              borderRadius: isMobile ? 0 : "10px",
-              maxWidth: isSmallScreen ? "100%" : "50%",
+              borderRadius: isMobile ? 0 : "16px",
+              maxWidth: isSmallScreen ? "100%" : "45%",
               width: "100%",
-              boxShadow: isMobile ? "none" : "4px 4px 20px -3px #000000",
+              boxShadow: isMobile ? "none" : "8px 8px 24px -3px rgba(0,0,0,0.2)",
+              mb: isSmallScreen ? 6 : 0,
               "& img": {
-                borderRadius: isMobile ? 0 : "10px",
+                borderRadius: isMobile ? 0 : "16px",
                 width: "100%",
                 height: "auto",
                 objectFit: "cover",
-                display: "block"
+                display: "block",
+                transition: "transform 0.3s ease-in-out",
+                "&:hover": {
+                  transform: "scale(1.02)"
+                }
               }
             }}
           >
@@ -161,11 +185,12 @@ export default function ProjectView() {
               flex: 1,
               display: "flex",
               flexDirection: "column",
-              gap: isMobile ? 3 : 4,
+              gap: isMobile ? 4 : 6,
               textAlign: isSmallScreen ? "center" : "left",
               width: "100%",
               px: isMobile ? 3 : 0,
-              py: isMobile ? 4 : 0
+              py: isMobile ? 4 : 0,
+              alignItems: isSmallScreen ? "center" : "flex-start"
             }}
           >
             <Box>
@@ -176,7 +201,7 @@ export default function ProjectView() {
                   fontWeight: "bold",
                   color: "text.primary",
                   fontSize: isMobile ? "1.3em" : isSmallScreen ? "1.3em" : "1.5em",
-                  mb: isMobile ? 2 : 2
+                  mb: isMobile ? 2 : 3
                 }}
               >
                 Description
@@ -187,11 +212,16 @@ export default function ProjectView() {
                   lineHeight: "1.8em",
                   whiteSpace: "pre-line",
                   color: "text.secondary",
-                  fontSize: isMobile ? "1em" : "1em"
+                  fontSize: isMobile ? "1em" : "1.1em",
+                  "& strong": {
+                    color: "text.primary",
+                    fontWeight: 600
+                  }
                 }}
-              >
-                {project.description}
-              </Typography>
+                dangerouslySetInnerHTML={{
+                  __html: project.description ? project.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') : ''
+                }}
+              />
             </Box>
 
             <Box>
@@ -202,7 +232,7 @@ export default function ProjectView() {
                   fontWeight: "bold",
                   color: "text.primary",
                   fontSize: isMobile ? "1.3em" : isSmallScreen ? "1.3em" : "1.5em",
-                  mb: isMobile ? 2 : 2
+                  mb: isMobile ? 2 : 3
                 }}
               >
                 Technologies
@@ -213,7 +243,7 @@ export default function ProjectView() {
                 flexWrap="wrap"
                 justifyContent={isSmallScreen ? "center" : "flex-start"}
                 sx={{
-                  gap: isMobile ? 1 : 1
+                  gap: isMobile ? 1 : 1.5
                 }}
               >
                 {project.tags?.map((tag, index) => (
@@ -241,7 +271,7 @@ export default function ProjectView() {
                 display: "flex",
                 gap: 2,
                 justifyContent: isSmallScreen ? "center" : "flex-start",
-                mt: isMobile ? 2 : 2
+                mt: isMobile ? 2 : 3
               }}
             >
               {project.prodUrl && (
@@ -255,7 +285,9 @@ export default function ProjectView() {
                     boxShadow: "4px 4px 20px -3px #000000",
                     backgroundColor: "white",
                     "&:hover": {
-                      backgroundColor: "#f5f5f5"
+                      backgroundColor: "#f5f5f5",
+                      transform: "translateY(-2px)",
+                      transition: "transform 0.2s ease-in-out"
                     }
                   }}
                 >
@@ -273,7 +305,9 @@ export default function ProjectView() {
                     boxShadow: "4px 4px 20px -3px #000000",
                     backgroundColor: "white",
                     "&:hover": {
-                      backgroundColor: "#f5f5f5"
+                      backgroundColor: "#f5f5f5",
+                      transform: "translateY(-2px)",
+                      transition: "transform 0.2s ease-in-out"
                     }
                   }}
                 >

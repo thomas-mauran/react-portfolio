@@ -17,24 +17,60 @@ export const projectByYears: year[] = [
     projects: [
       {
         name: "Nihondex",
-        description: "An innovative, gamified platform designed to make learning Japanese both effective and enjoyable. It offers a comprehensive suite of tools tailored for learners at all levels, from complete beginners to those preparing for the JLPT N1 exam. Features include interactive Kana lessons with writing practice, a smart vocabulary system using spaced repetition, grammar mastery covering JLPT N5 to N1, conjugation drills, and reading practice with comprehension quizzes. The platform includes a unique gamification system where users build and customize a floating island as they progress, unlocking decorations and tracking achievements. Progress tracking features monitor learning with detailed statistics, including over 7,500 vocabulary words, 4,000+ kanji characters, 800+ grammar patterns, and 45,000+ example sentences. Built with Vue.js and NestJS, with infrastructure managed through Kubernetes and Terraform, and monitoring via Grafana.",
+        description: "An innovative, gamified platform designed to make learning Japanese both effective and enjoyable. It offers a comprehensive suite of tools tailored for learners at all levels, from complete beginners to those preparing for the **JLPT N1** exam. Features include interactive **Kana** lessons with writing practice, a smart vocabulary system using **spaced repetition**, grammar mastery covering **JLPT N5 to N1**, conjugation drills, and reading practice with comprehension quizzes. The platform includes a unique gamification system where users build and customize a floating island as they progress, unlocking decorations and tracking achievements. Progress tracking features monitor learning with detailed statistics, including over **7,500 vocabulary words**, **4,000+ kanji characters**, **800+ grammar patterns**, and **45,000+ example sentences**. Built with **Vue.js** and **NestJS**, with infrastructure managed through **Kubernetes** and **Terraform**, and monitoring via **Grafana**.",
         prodUrl: "https://nihondex.com",
         thumbnailUrl: "https://nihondex.com/_nuxt/island.Xr7EFBj6.png",
         tags: ["Vue.js", "NestJS", "Kubernetes", "Terraform", "Grafana"],
+      },
+      {
+        name: "OpenStack Terraform",
+        description: "**Terraform** GitOps infrastructure for **OpenStack** with **ArgoCD** integration. This project demonstrates **infrastructure as code** practices for OpenStack environments, featuring automated deployment, scaling, and management of cloud resources.",
+        prodUrl: "",
+        thumbnailUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/OpenStack%C2%AE_Logo_2016.svg/1200px-OpenStack%C2%AE_Logo_2016.svg.png",
+        sourceUrl: "https://github.com/thomas-mauran/openstack-tf",
+        tags: ["Terraform", "OpenStack", "ArgoCD", "GitOps"],
+      },
+      {
+        name: "Chess-tui",
+        description: "**Chess-TUI** is a lightweight, terminal-based chess application developed in **Rust**, offering a minimalist and efficient environment for playing chess directly from the command line.\n\nKey Features:\n• **Local Two-Player Mode**: Play against another person on the same machine.\n• **UCI Engine Support**: Integrate any Universal Chess Interface (UCI)-compatible engine, such as Stockfish, to play against AI opponents.\n• **Display Modes**: Choose between Unicode and ASCII representations for the chessboard.\n• **Standard Chess Rules**: Supports castling, en passant, pawn promotion, the fifty-move rule, and threefold repetition.\n• **Customizable Configuration**: Adjust settings like engine path, display mode, and logging level via a TOML configuration file.",
+        prodUrl: "",
+        thumbnailUrl: "https://raw.githubusercontent.com/thomas-mauran/chess-tui/main/examples/play_against_white_bot.gif",
+        sourceUrl: "https://github.com/thomas-mauran/chess-tui",
+        tags: ["Rust", "TUI", "Open-source"],
+      },
+    ],
+  },
+  {
+    year: "2024",
+    projects: [
+      {
+        name: "Astrophotography Blog",
+        description: "Driven by my passion for **physics** and **astronomy**, I began photographing the night sky from my garden in Montpellier. I started with a vintage **1980s Japanese telescope**, which I upgraded using custom **3D-printed components**. I now use more advanced equipment to capture **deep-sky objects** located millions of light-years from Earth, sharing my results and learnings through a dedicated astrophotography blog.",
+        prodUrl: "https://astro.thomas-mauran.com/",
+        thumbnailUrl: "https://astro.thomas-mauran.com/p/m51/m51-1.png",
+        tags: ["Astronomy", "3D Printing", "Photography"],
+      },
+      {
+        name: "LinkedOut",
+        description: "**LinkedIn for seasonal workers** - A platform designed to connect seasonal workers with employers, built with **Kotlin**. The app helps seasonal workers find opportunities and employers find qualified temporary staff.",
+        prodUrl: "",
+        thumbnailUrl: "https://github.com/thomas-mauran/LinkedOut/blob/main/docs/assets/ms.png?raw=true",
+        sourceUrl: "https://github.com/thomas-mauran/LinkedOut",
+        tags: ["Kotlin", "Android"],
+      },
+      {
+        name: "Research Paper - Binary Star Transits",
+        description: "A scientific research paper assessing the scientific value of **amateur photometric observations** of **binary star transits**. This project combines my interests in **astronomy** and **data analysis**, demonstrating the potential of **citizen science** in astronomical research.",
+        prodUrl: "",
+        thumbnailUrl: "https://c02.purpledshub.com/uploads/sites/48/2019/11/07_BinaryProtoStar-307bb0b.jpg?webp=1&w=1200",
+        sourceUrl: "https://github.com/thomas-mauran/research-paper",
+        tags: ["LaTeX", "Astronomy", "Research"],
       },
     ],
   },
   {
     year: "2023-2024",
     projects: [
-      {
-        name: "Chess-tui",
-        description: "Chess-TUI is a lightweight, terminal-based chess application developed in Rust, offering a minimalist and efficient environment for playing chess directly from the command line.\n\nKey Features:\n• Local Two-Player Mode: Play against another person on the same machine.\n• UCI Engine Support: Integrate any Universal Chess Interface (UCI)-compatible engine, such as Stockfish, to play against AI opponents.\n• Display Modes: Choose between Unicode and ASCII representations for the chessboard.\n• Standard Chess Rules: Supports castling, en passant, pawn promotion, the fifty-move rule, and threefold repetition.\n• Customizable Configuration: Adjust settings like engine path, display mode, and logging level via a TOML configuration file.",
-        prodUrl: "",
-        thumbnailUrl: "https://raw.githubusercontent.com/thomas-mauran/chess-tui/main/examples/play_against_white_bot.gif",
-        sourceUrl: "https://github.com/thomas-mauran/chess-tui",
-        tags: ["Rust", "TUI", "Open-source"],
-      },
       {
         name: "PyrOS",
         description: "Pyros is a project to learn about kernel development. The goal is to be able to boot a simple kernel with some basic functions",
@@ -94,7 +130,6 @@ export const projectByYears: year[] = [
         sourceUrl: "https://github.com/thomas-mauran/tic-tac-toe",
         tags: ["Rust"],
       },
-
       {
         name: "Polynotes",
         description:

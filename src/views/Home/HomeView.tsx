@@ -26,8 +26,8 @@ export default function HomeView() {
           <Box sx={{ textAlign: isSmallScreen ? "center" : "left", marginLeft: isSmallScreen ? 2 : "15%" }}>
             <Box sx={{ marginBottom: "40px", paddingTop: isSmallScreen ? " 25vh" : "" }}>
               <h1 style={{ fontSize: isSmallScreen ? "2em" : "3.2em" }}>My name is Thomas Mauran 👋</h1>
-              <Typography variant="h5" color="initial" sx={{ fontSize: isSmallScreen ? "1.2em" : "1.5em" }}>
-                Fullstack / DevOps engineering apprentice
+              <Typography variant="h5" color="initial" sx={{ fontSize: isSmallScreen ? "1.2em" : "1.5em", marginTop: "20px" }}>
+                DevOps Engineer
               </Typography>
             </Box>
             <a href="#about" className="StartBtn">
@@ -80,10 +80,14 @@ export default function HomeView() {
               <h1 data-aos={isSmallScreen ? "" : "fade-up"}>Education</h1>
               <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
                 <br />
-                <b>2022-2025:</b> Computer Engineering degree, Polytech Montpellier
+                <b>2022-2025:</b> DevOps Engineering degree, Polytech Montpellier
+                <br />
+                <i>Selective Engineering School, Montpellier, France</i>
                 <br />
                 <br />
-                <b>2020-2022:</b> Associate's Degree of computer science, IUT of Montpellier
+                <b>2020-2022:</b> 2 year qualification in computer science, IUT of Montpellier
+                <br />
+                <i>University Institute of Technology (IUT) Montpellier, France</i>
                 <br />
                 <br />
                 <b>2017-2020:</b> Scientific Baccalaureate, Science of life and the earth, Math speciality
@@ -103,9 +107,33 @@ export default function HomeView() {
       </Box>
       {/* Experiences */}
       <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", backgroundColor: "#F5F5F5", width: "100vw" }} id="experiences">
-        <Box sx={{ display: "flex", alignItems: "center", marginTop: "100px", height: isSmallScreen ? "100vh" : "100vh", zIndex: 1000, width: "100%", backgroundColor: "#F5F5F5" }} id="about">
-          <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "" }}>
-            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "20%", zIndex: "100" }}>
+        <Box sx={{ 
+          display: "flex", 
+          alignItems: "center", 
+          marginTop: "100px", 
+          minHeight: isSmallScreen ? "auto" : "100vh", 
+          zIndex: 1000, 
+          width: "100%", 
+          backgroundColor: "#F5F5F5",
+          pb: isSmallScreen ? 6 : 0
+        }} id="about">
+          <Box sx={{ 
+            display: "flex", 
+            justifyContent: "space-between", 
+            width: "100%", 
+            padding: "0 10%", 
+            flexDirection: isSmallScreen ? "column" : "row", 
+            alignItems: isSmallScreen ? "center" : "",
+            gap: isSmallScreen ? 4 : 0
+          }}>
+            <Box sx={{ 
+              display: "flex", 
+              flexDirection: "column", 
+              textAlign: isSmallScreen ? "center " : "left", 
+              marginRight: isSmallScreen ? 0 : "20%", 
+              zIndex: "100",
+              width: "100%"
+            }}>
               <h1 data-aos={isSmallScreen ? "" : "fade-up"}>Experiences</h1>
               <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
                 <br />
@@ -126,7 +154,20 @@ export default function HomeView() {
                 . The project went smoothly and I had the time to go further than the evaluation and implement a major part of the solution which is now running in production.
                 <br />
                 <br />
-                This intership was an amazing experience, I was surrounded by very interesting people from all around the world, I was in the middle of the biggest scientific experiment in the world and I had the chance to work on a project that will
+                Key achievements:
+                <br />
+                • Secured critical data services (Hadoop YARN, HDFS, MapReduce History, HBase, Spark History Server) using <b>Apache Knox</b> as a reverse proxy
+                <br />
+                • Integrated CERN Single Sign-On (<b>SSO</b>) with <b>Apache Knox</b> to centralize and simplify access management
+                <br />
+                • Ensured high availability (<b>HA</b>) for all services, improving reliability and system uptime
+                <br />
+                • Implemented auditing and monitoring mechanisms to log access and track security events
+                <br />
+                • Delivered technical presentations to engineering teams and students at CERN
+                <br />
+                <br />
+                This internship was an amazing experience, I was surrounded by very interesting people from all around the world, I was in the middle of the biggest scientific experiment in the world and I had the chance to work on a project that will
                 be used by thousands of people.
                 <br />
                 The Openlab program also allowed me to visit multiple experiments such as <i>ATLAS and ALICE control centers </i>, <i> the Proton Sychrotron</i>, <i>LINAC 1</i>, <i>CCC</i> and the <i>Antimatter factory</i>
@@ -145,8 +186,25 @@ export default function HomeView() {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center", height: isSmallScreen ? "100vh" : "80vh", zIndex: 1000, width: "100%", backgroundColor: "#F5F5F5", marginTop: "50px" }} id="about">
-          <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "" }}>
+        <Box sx={{ 
+          display: "flex", 
+          alignItems: "center", 
+          minHeight: isSmallScreen ? "auto" : "80vh", 
+          zIndex: 1000, 
+          width: "100%", 
+          backgroundColor: "#F5F5F5", 
+          marginTop: isSmallScreen ? 4 : "50px",
+          pb: isSmallScreen ? 6 : 0
+        }} id="about">
+          <Box sx={{ 
+            display: "flex", 
+            justifyContent: "space-between", 
+            width: "100%", 
+            padding: "0 10%", 
+            flexDirection: isSmallScreen ? "column" : "row", 
+            alignItems: isSmallScreen ? "center" : "",
+            gap: isSmallScreen ? 4 : 0
+          }}>
             <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
               <img src="./kuzzle.webp" alt="Kuzzle logo" style={{ width: isSmallScreen ? "200px" : "400px", borderRadius: "10px", marginTop: "50%" }} className="hover-picture" onClick={() => (window.location.href = "https://kuzzle.io/fr/")} />
             </Box>
@@ -161,24 +219,60 @@ export default function HomeView() {
                 platform.
                 <br />
                 <br />
-                Throughout the years I have been working on multiple projects such as client projects (SPIE, Omniscient, Ales city, Eiffage), internal tools, and the Iot-platform itself.
+                Key achievements:
                 <br />
-                <br />I have been learning a lot about the software development process, the DevOps culture and how to efficiently work and release software in a team.
+                • Provisioned and managed <b>Kubernetes</b> production environments using <b>Terraform</b> and <b>Ansible</b>, following Infrastructure as Code (<b>IaC</b>) best practices
+                <br />
+                • Designed and implemented distributed tracing and monitoring with <b>Istio</b> and the <b>LGTM</b> stack (<b>Loki</b>, <b>Grafana</b>, <b>Tempo</b>, <b>Mimir</b>)
+                <br />
+                • Optimized <b>CI/CD</b> pipelines, reducing build and deployment times by over 60%
+                <br />
+                • Developed and enhanced key features for an IoT dashboarding platform using <b>Vue.js</b>, improving UX and performance
+                <br />
+                • Contributed to the core backend of the open-source <b>Kuzzle</b> framework, identifying and resolving critical issues affecting system stability
+                <br />
+                <br />
+                Throughout the years I have been working on multiple projects such as client projects (SPIE, Omniscient, Ales city, Eiffage), internal tools, and the IoT-platform itself.
+                <br />
+                <br />I have been learning a lot about the software development process, the <b>DevOps</b> culture and how to efficiently work and release software in a team.
               </p>
             </Box>
           </Box>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center", height: isSmallScreen ? "100vh" : "80vh", zIndex: 1000, width: "100%", backgroundColor: "#F5F5F5" }} id="about">
-          <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "" }}>
+        <Box sx={{ 
+          display: "flex", 
+          alignItems: "center", 
+          minHeight: isSmallScreen ? "auto" : "80vh", 
+          zIndex: 1000, 
+          width: "100%", 
+          backgroundColor: "#F5F5F5",
+          pb: isSmallScreen ? 6 : 0
+        }} id="about">
+          <Box sx={{ 
+            display: "flex", 
+            justifyContent: "space-between", 
+            width: "100%", 
+            padding: "0 10%", 
+            flexDirection: isSmallScreen ? "column" : "row", 
+            alignItems: isSmallScreen ? "center" : "",
+            gap: isSmallScreen ? 4 : 0
+          }}>
             <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "20%", zIndex: "100" }}>
               <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
                 <br />
-                <b>2022 - Fullstack internship</b>
+                <b>2022 - Fullstack internship at CIRAD</b>
                 <br />
                 The CIRAD (International Cooperation Center for Agricultural Research for Development) is a french research center that works on multiple projects to help developping countries.
                 <br />
                 <br />
-                I was able to work there for 3 months as a fullstack developer. I designed and created a wikipedia like platform to handle plasmid classification for the research team.
+                Key achievements:
+                <br />
+                • Designed and built a custom platform for plasmid classification, inspired by Wikipedia
+                <br />
+                • Implemented version control and collaboration workflows using <b>GitHub</b>
+                <br />
+                • Leveraged <b>Docker</b> for containerization, ensuring consistent environment and efficient deployment
+                <br />
                 <br />
                 This internship was a very good experience for me, I was able to work work closely with real clients (the biologists) to really provide them a tool suitable for their needs.
               </p>
@@ -350,7 +444,7 @@ export default function HomeView() {
             alignItems: "center",
             width: "100%",
             padding: "0 10%",
-            marginTop: "-2%",
+            marginTop: isSmallScreen ? "10%" : "-2%",
             flexDirection: isSmallScreen ? "column" : "row",
           }}>
           <Box
@@ -366,7 +460,7 @@ export default function HomeView() {
             <Box sx={{ marginBottom: 3, marginTop: "20px", textAlign: "left", width: "100%" }}>
               <h2 style={{ marginBottom: 20 }}>Open Source:</h2>
               <p>
-                <div style={{ marginBottom: 20 }} data-aos="fade-right">
+                <div style={{ marginBottom: 20 }} data-aos={isSmallScreen ? "" : "fade-right"}>
                   <b>Chess TUI:</b>{" "}
                   <Link to="https://github.com/thomas-mauran/chess-tui" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline"}}>
                     GitHub Repository
@@ -375,7 +469,7 @@ export default function HomeView() {
                   <br />
                   <u>Description:</u> I created and am maintaining a Chess-tui wich is a terminal chess game written in Rust.
                 </div>
-                <div style={{ marginBottom: 20 }} data-aos="fade-right">
+                <div style={{ marginBottom: 20 }} data-aos={isSmallScreen ? "" : "fade-right"}>
                   <b>Node JS:</b>{" "}
                   <Link to="https://github.com/nodejs/node/pull/52225" target="_blank" rel="noopener noreferrer">
                     PR #52225
@@ -385,7 +479,7 @@ export default function HomeView() {
                   <u>Description:</u> Node JS is a runtime environment that allows you to run JavaScript on the server side. I contributed to the project by adding custom log message when using the .load and .save method of the repl when no file was
                   provided.
                 </div>
-                <div style={{ marginBottom: 20 }} data-aos="fade-right">
+                <div style={{ marginBottom: 20 }} data-aos={isSmallScreen ? "" : "fade-right"}>
                   <b>NASA/harmony:</b>{" "}
                   <Link to="https://github.com/nasa/harmony/pull/647" target="_blank" rel="noopener noreferrer">
                     PR #647
@@ -402,7 +496,7 @@ export default function HomeView() {
               <h2 style={{ marginBottom: 20 }}>Wikipedia:</h2>
 
               <p>
-                <div style={{ marginBottom: 20 }} data-aos="fade-right">
+                <div style={{ marginBottom: 20 }} data-aos={isSmallScreen ? "" : "fade-right"}>
                   <strong>Toshifumi Hinata:</strong>{" "}
                   <Link to="https://fr.wikipedia.org/wiki/Toshifumi_Hinata#" target="_blank" rel="noopener noreferrer">
                     Article
@@ -410,7 +504,7 @@ export default function HomeView() {
                   <br />
                   <u>Description:</u> I created the wikipedia page of Toshifumi Hinata, a famous japanese composer that I enjoy listening to.
                 </div>
-                <div style={{ marginBottom: 20 }} data-aos="fade-right">
+                <div style={{ marginBottom: 20 }} data-aos={isSmallScreen ? "" : "fade-right"}>
                   <strong>Hommage à confucius:</strong>{" "}
                   <Link to="https://fr.wikipedia.org/wiki/Hommage_%C3%A0_Confucius" target="_blank" rel="noopener noreferrer">
                     Article
@@ -422,7 +516,6 @@ export default function HomeView() {
             </Box>
           </Box>
         </Box>
-        
       </Box>
       <div className="custom-shape-divider-bottom-1697903916">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -450,7 +543,7 @@ export default function HomeView() {
               <Box sx={{ display: "flex", marginBottom: "40px" }} data-aos={isSmallScreen ? "" : "fade-right"}>
                 <EmailIcon sx={{ marginRight: "10px", marginTop: "auto", marginBottom: "auto" }} />
                 <Typography variant="h6" color="initial" sx={{ fontSize: isSmallScreen ? "1em" : "1.2em" }}>
-                  thomas.mauran@etu.umontpellier.fr
+                  thomasmauran@yahoo.com
                 </Typography>
               </Box>
               <Box sx={{ display: "flex" }} data-aos={isSmallScreen ? "" : "fade-right"}>
@@ -474,7 +567,7 @@ export default function HomeView() {
         </Box>
       </Box>
       <Box sx={{ backgroundColor: "#F5F5F5", width: "100%" }}>
-        <p>Made with ❤️ by Thomas Mauran © 2024</p>
+        <p>Made with ❤️ by Thomas Mauran © 2025</p>
       </Box>
     </Box>
   );
