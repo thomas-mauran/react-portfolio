@@ -105,6 +105,84 @@ export default function HomeView() {
           </svg>
         </div>
       </Box>
+      {/* Honors & Awards */}
+      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", width: "100vw", backgroundColor: "#F5F5F5" }} id="honors">
+        <Box sx={{ display: "flex", alignItems: "center", minHeight: isSmallScreen ? "auto" : "100vh", zIndex: 1000, width: "100%", backgroundColor: "#F5F5F5", py: isSmallScreen ? 6 : 8 }} id="about">
+          <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "", gap: isSmallScreen ? 4 : 0 }}>
+            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "20%", zIndex: "100", width: "100%" }}>
+              <h1 data-aos={isSmallScreen ? "" : "fade-up"} style={{ textAlign: isSmallScreen ? "center" : "left", marginBottom: "20px" }}>Honors & Awards</h1>
+              <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
+                <br />
+                <b>3rd Place - CTF OpenCycom (2025)</b>
+                <br />
+                <u>Description:</u> Achieved third place in the OpenCycom Capture The Flag competition.
+                <br />
+                <br />
+                <b>1st Place - 3DS OUTSCALE Challenge (2024)</b>
+                <br />
+                <u>Description:</u> Won first place in the 3DS OUTSCALE challenge during the Nuit de l'info 2024.
+                <br />
+                <br />
+                <b>1st Place - MIPIHSIB Challenge (2024)</b>
+                <br />
+                <u>Description:</u> Won first place in the MIPIHSIB challenge during the Nuit de l'info 2024.
+                <br />
+                <br />
+                <b>3rd Place - Thales Rust Hackathon (2024)</b>
+                <br />
+                <u>Description:</u> Achieved third place in the Thales Rust Hackathon focused on cybersecurity.
+                <br />
+                <br />
+                <b>1st Place - ASI Challenge (2023)</b>
+                <br />
+                <u>Description:</u> Won first place in the ASI challenge during the Nuit de l'info 2023.
+                <br />
+                <br />
+                <b>1st Place - Airbus Challenge (2023)</b>
+                <br />
+                <u>Description:</u> Won first place in the Airbus challenge during the Nuit de l'info 2023.
+                <br />
+                <br />
+                <b>2nd Place - "Met du green dans ton it" Challenge (2022)</b>
+                <br />
+                <u>Description:</u> Secured second place in the challenge focused on reducing website carbon footprint.
+                <br />
+                <br />
+                <b>1st Place - DevOps Heroes Hackathon (2022)</b>
+                <br />
+                <u>Description:</u> Won first place in the DevOps Heroes hackathon organized by CA-GIP at Epitech Montpellier.
+                <br />
+                <br />
+                <b>4th Place - Nuit de l'info Challenge (2021)</b>
+                <br />
+                <u>Description:</u> Created a Three.js animation for the Nuit de l'info 2021 challenge.
+                <br />
+                <br />
+                <b>1st Place - Navigation Bar Design Challenge (2020)</b>
+                <br />
+                <u>Description:</u> Won first place in the innovative navigation bar design challenge during the Nuit de l'info 2020.
+              </p>
+            </Box>
+            <Box sx={{ display: "flex", flexDirection: "column" }} data-aos={isSmallScreen ? "" : "fade-up"}>
+              <img 
+                src="./cern-award.jpg" 
+                alt="CERN Award" 
+                style={{ 
+                  width: isSmallScreen ? "300px" : "500px", 
+                  borderRadius: "10px", 
+                  boxShadow: "4px 4px 20px -3px #000000",
+                  marginTop: isSmallScreen ? 4 : 0
+                }} 
+              />
+            </Box>
+          </Box>
+        </Box>
+        <div className="custom-shape-divider-bottom-23">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+          </svg>
+        </div>
+      </Box>
       {/* Experiences */}
       <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", backgroundColor: "#F5F5F5", width: "100vw" }} id="experiences">
         <Box sx={{ 
@@ -517,11 +595,73 @@ export default function HomeView() {
           </Box>
         </Box>
       </Box>
-      <div className="custom-shape-divider-bottom-1697903916">
+      {/* Awards */}
+      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", width: "100vw", backgroundColor: "#FFFFFF" }} id="awards">
+        <Box sx={{ display: "flex", alignItems: "center", minHeight: isSmallScreen ? "auto" : "100vh", zIndex: 1000, width: "100%", backgroundColor: "#FFFFFF", py: isSmallScreen ? 6 : 8 }} id="about">
+          <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "", gap: isSmallScreen ? 4 : 0 }}>
+            <Box sx={{ display: "flex", flexDirection: "column", textAlign: isSmallScreen ? "center " : "left", marginRight: isSmallScreen ? 0 : "20%", zIndex: "100", width: "100%" }}>
+              <h1 data-aos={isSmallScreen ? "" : "fade-up"} style={{ textAlign: isSmallScreen ? "center" : "left", marginBottom: "20px" }}>Awards & Achievements</h1>
+              <p style={{ lineHeight: "2em" }} data-aos={isSmallScreen ? "" : "fade-up"}>
+                <br />
+                <b>3rd Place - CTF OpenCycom (2025)</b>
+                <br />
+                <u>Description:</u> Achieved third place in the OpenCycom Capture The Flag competition.
+                <br />
+                <br />
+                <b>1st Place - 3DS OUTSCALE Challenge (2024)</b>
+                <br />
+                <u>Description:</u> Won first place in the 3DS OUTSCALE challenge during the Nuit de l'info 2024.
+                <br />
+                <br />
+                <b>1st Place - MIPIHSIB Challenge (2024)</b>
+                <br />
+                <u>Description:</u> Won first place in the MIPIHSIB challenge during the Nuit de l'info 2024.
+                <br />
+                <br />
+                <b>3rd Place - Thales Rust Hackathon (2024)</b>
+                <br />
+                <u>Description:</u> Achieved third place in the Thales Rust Hackathon focused on cybersecurity.
+                <br />
+                <br />
+                <b>1st Place - ASI Challenge (2023)</b>
+                <br />
+                <u>Description:</u> Won first place in the ASI challenge during the Nuit de l'info 2023.
+                <br />
+                <br />
+                <b>1st Place - Airbus Challenge (2023)</b>
+                <br />
+                <u>Description:</u> Won first place in the Airbus challenge during the Nuit de l'info 2023.
+                <br />
+                <br />
+                <b>2nd Place - "Met du green dans ton it" Challenge (2022)</b>
+                <br />
+                <u>Description:</u> Secured second place in the challenge focused on reducing website carbon footprint.
+                <br />
+                <br />
+                <b>1st Place - DevOps Heroes Hackathon (2022)</b>
+                <br />
+                <u>Description:</u> Won first place in the DevOps Heroes hackathon organized by CA-GIP at Epitech Montpellier.
+                <br />
+                <br />
+                <b>4th Place - Nuit de l'info Challenge (2021)</b>
+                <br />
+                <u>Description:</u> Created a Three.js animation for the Nuit de l'info 2021 challenge.
+                <br />
+                <br />
+                <b>1st Place - Navigation Bar Design Challenge (2020)</b>
+                <br />
+                <u>Description:</u> Won first place in the innovative navigation bar design challenge during the Nuit de l'info 2020.
+              </p>
+            </Box>
+          </Box>
+        </Box>
+        <div className="custom-shape-divider-bottom-1697903916">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
           </svg>
         </div>
+      </Box>
+
       {/* Contact  */}
       <Box sx={{ display: "flex", alignItems: "center", height: "85vh", zIndex: 1000, width: "100%", backgroundColor: "#F5F5F5" }} id="contact">
         <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "0 10%", marginTop: "-2%", flexDirection: isSmallScreen ? "column" : "row" }}>

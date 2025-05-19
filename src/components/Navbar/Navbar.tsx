@@ -67,6 +67,9 @@ export default function Navbar() {
               <Link to="/" onClick={() => smoothScroll("contributions")} className="NavLink">
                Contributions
               </Link>
+              <Link to="/" onClick={() => smoothScroll("awards")} className="NavLink">
+               Awards
+              </Link>
               <Link to="/" onClick={() => smoothScroll("contact")} className="NavLink">
                 Contact
               </Link>
