@@ -461,8 +461,21 @@ export default function HomeView() {
               <h2 style={{ marginBottom: 20 }}>Open Source:</h2>
               <p>
                 <div style={{ marginBottom: 20 }} data-aos={isSmallScreen ? "" : "fade-right"}>
+                  <b>Traefik - Documentation Update (2025)</b>{" "}
+                  <Link to="https://github.com/traefik/traefik/pull/11798" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "#0000EE"}}>
+                    PR #11798
+                  </Link>{" "}
+                  (Issue:{" "}
+                  <Link to="https://github.com/traefik/traefik/issues/11784" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "#0000EE"}}>
+                    #11784
+                  </Link>
+                  )
+                  <br />
+                  <u>Description:</u> Contributed to Traefik by removing the obsolete `version` field from docker compose files in the documentation. This change aligns with current best practices and prevents potential warnings. The PR was merged into v3.4.
+                  <br />
+                  <br />
                   <b>Chess TUI:</b>{" "}
-                  <Link to="https://github.com/thomas-mauran/chess-tui" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline"}}>
+                  <Link to="https://github.com/thomas-mauran/chess-tui" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "#0000EE"}}>
                     GitHub Repository
                   </Link>{" "}
                   (Rust)
@@ -471,7 +484,7 @@ export default function HomeView() {
                 </div>
                 <div style={{ marginBottom: 20 }} data-aos={isSmallScreen ? "" : "fade-right"}>
                   <b>Node JS:</b>{" "}
-                  <Link to="https://github.com/nodejs/node/pull/52225" target="_blank" rel="noopener noreferrer">
+                  <Link to="https://github.com/nodejs/node/pull/52225" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "#0000EE"}}>
                     PR #52225
                   </Link>{" "}
                   (JS)
@@ -481,7 +494,7 @@ export default function HomeView() {
                 </div>
                 <div style={{ marginBottom: 20 }} data-aos={isSmallScreen ? "" : "fade-right"}>
                   <b>NASA/harmony:</b>{" "}
-                  <Link to="https://github.com/nasa/harmony/pull/647" target="_blank" rel="noopener noreferrer">
+                  <Link to="https://github.com/nasa/harmony/pull/647" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "#0000EE"}}>
                     PR #647
                   </Link>{" "}
                   (JS)
@@ -498,7 +511,7 @@ export default function HomeView() {
               <p>
                 <div style={{ marginBottom: 20 }} data-aos={isSmallScreen ? "" : "fade-right"}>
                   <strong>Toshifumi Hinata:</strong>{" "}
-                  <Link to="https://fr.wikipedia.org/wiki/Toshifumi_Hinata#" target="_blank" rel="noopener noreferrer">
+                  <Link to="https://fr.wikipedia.org/wiki/Toshifumi_Hinata#" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "#0000EE"}}>
                     Article
                   </Link>
                   <br />
@@ -506,7 +519,7 @@ export default function HomeView() {
                 </div>
                 <div style={{ marginBottom: 20 }} data-aos={isSmallScreen ? "" : "fade-right"}>
                   <strong>Hommage à confucius:</strong>{" "}
-                  <Link to="https://fr.wikipedia.org/wiki/Hommage_%C3%A0_Confucius" target="_blank" rel="noopener noreferrer">
+                  <Link to="https://fr.wikipedia.org/wiki/Hommage_%C3%A0_Confucius" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "#0000EE"}}>
                     Article
                   </Link>
                   <br />
